@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Applicant Profile Management & Update | MASCO Group</title>
+
+    <meta
+      name="description"
+      content="MASCO Group Applicant Profile Management System. Create, update and manage applicant profiles, skills, education, employment history and recruitment information."
+    />
+
+    <meta
+      name="keywords"
+      content="MASCO Group, garments Bangladesh, knitting garments Bangladesh, textile industry Bangladesh, applicant profile management, recruitment management system, career opportunities Bangladesh"
+    />
+
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="MASCO Group" />
+
+    <link rel="icon" href="../assets/img/masco_logo.png" />
+
+    <link rel="stylesheet" href="../assets/css/leftMenu.css" />
+    <link rel="stylesheet" href="../assets/css/topMenu.css" />
+    <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+  </head>
+
+  <body>
+    <div id="leftMenuContainer"></div>
+
+    <div class="main-layout">
+      <div id="topMenuContainer"></div>
+
+      <main class="page-content">
+        <div class="content-card page-title-card">
+          <h2>Applicant Profile Management & Update</h2>
+          <!-- <p>
+            Create, update and maintain applicant information through a guided
+            profile completion process.
+          </p> -->
+        </div>
+
+        <section class="content-card apm-card">
+          <!-- TABS -->
+
+          <div class="apm-tabs">
+            <button class="apm-tab active" data-tab="tab1">1. Profile</button>
+
+            <button class="apm-tab" data-tab="tab2">2. Education</button>
+
+            <button class="apm-tab" data-tab="tab3">3. Employment</button>
+
+            <button class="apm-tab" data-tab="tab4">4. Preferences</button>
+
+            <button class="apm-tab" data-tab="tab5">5. Review</button>
+          </div>
+
+          <!-- TAB 1 -->
+
+          <div class="apm-tab-content active" id="tab1">
+            <div class="apm-grid">
+              <div class="apm-field">
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter Full Name" />
+              </div>
+
+              <div class="apm-field">
+                <label>Email Address</label>
+                <input type="email" placeholder="Enter Email Address" />
+              </div>
+
+              <div class="apm-field">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="Enter Phone Number" />
+              </div>
+
+              <div class="apm-field">
+                <label>Date of Birth</label>
+                <input type="date" />
+              </div>
+
+              <div class="apm-field">
+                <label>Current Location</label>
+                <input type="text" placeholder="Enter Current Location" />
+              </div>
+
+              <div class="apm-field">
+                <label>Years of Experience</label>
+                <input type="number" placeholder="Years of Experience" />
+              </div>
+            </div>
+
+            <div class="apm-field">
+              <label>Skills</label>
+
+              <input
+                type="text"
+                id="apmuSkillInput"
+                class="apmu-skill-input"
+                placeholder="Type a skill and press Enter"
+              />
+
+              <div id="apmuSkillContainer" class="apmu-skill-container"></div>
+            </div>
+
+            <div class="apm-field">
+              <label>About Me</label>
+              <textarea rows="5"></textarea>
+            </div>
+
+            <div class="apm-grid" style="margin-top: 15px">
+              <div class="apm-field">
+                <label>Upload Resume</label>
+                <input type="file" accept=".pdf" />
+                <small>Only PDF allowed. Maximum file size 10MB.</small>
+              </div>
+
+              <div class="apm-field">
+                <label>Upload Profile Photo</label>
+                <input type="file" accept=".jpg,.jpeg,.png" />
+                <small
+                  >Only JPG, JPEG, PNG allowed. Maximum file size 5MB.</small
+                >
+              </div>
+            </div>
+
+            <div class="apm-action">
+              <button class="apm-next" data-next="tab2">Save & Next</button>
+            </div>
+          </div>
+
+          <!-- TAB 2 -->
+
+          <div class="apm-tab-content" id="tab2">
+            <div class="apm-grid">
+              <div class="apm-field">
+                <label>Highest Degree</label>
+                <input type="text" />
+              </div>
+
+              <div class="apm-field">
+                <label>Institution Name</label>
+                <input type="text" />
+              </div>
+
+              <div class="apm-field">
+                <label>Passing Year</label>
+                <input type="number" />
+              </div>
+
+              <div class="apm-field">
+                <label>CGPA / Result</label>
+                <input type="text" />
+              </div>
+            </div>
+
+            <div class="apm-field">
+              <label>Academic Achievements</label>
+              <textarea rows="5"></textarea>
+            </div>
+
+            <div class="apm-action">
+              <button class="apm-next" data-next="tab3">Save & Next</button>
+            </div>
+          </div>
+
+          <!-- TAB 3 -->
+
+          <div class="apm-tab-content" id="tab3">
+            <div class="apm-grid">
+              <div class="apm-field">
+                <label>Current Company</label>
+                <input type="text" />
+              </div>
+
+              <div class="apm-field">
+                <label>Current Designation</label>
+                <input type="text" />
+              </div>
+
+              <div class="apm-field">
+                <label>Employment Start Date</label>
+                <input type="date" />
+              </div>
+
+              <div class="apm-field">
+                <label>Current Salary</label>
+                <input type="number" />
+              </div>
+            </div>
+
+            <div class="apm-field">
+              <label>Employment Summary</label>
+              <textarea rows="5"></textarea>
+            </div>
+
+            <div class="apm-action">
+              <button class="apm-next" data-next="tab4">Save & Next</button>
+            </div>
+          </div>
+
+          <!-- TAB 4 -->
+
+          <div class="apm-tab-content" id="tab4">
+            <div class="apm-grid">
+              <div class="apm-field">
+                <label>Preferred Position</label>
+                <input type="text" />
+              </div>
+
+              <div class="apm-field">
+                <label>Preferred Department</label>
+                <select>
+                  <option>MIS</option>
+                  <option>HR</option>
+                  <option>Accounts</option>
+                  <option>Production</option>
+                </select>
+              </div>
+
+              <div class="apm-field">
+                <label>Preferred Unit</label>
+                <select>
+                  <option>Corporate</option>
+                  <option>Knit</option>
+                  <option>Woven</option>
+                </select>
+              </div>
+
+              <div class="apm-field">
+                <label>Expected Salary</label>
+                <input type="number" />
+              </div>
+            </div>
+
+            <div class="apm-field">
+              <label>Career Objective</label>
+              <textarea rows="5"></textarea>
+            </div>
+
+            <div class="apm-action">
+              <button class="apm-next" data-next="tab5">Save & Next</button>
+            </div>
+          </div>
+
+          <!-- TAB 5 -->
+
+          <div class="apm-tab-content" id="tab5">
+            <div class="apm-review-card">
+              <h3>Profile Completion Review</h3>
+
+              <p>
+                Please review all information before updating your profile. You
+                may switch between tabs and make changes anytime.
+              </p>
+
+              <div class="apm-summary">
+                <div><strong>Profile Information</strong> ✓</div>
+                <div><strong>Education Information</strong> ✓</div>
+                <div><strong>Employment Information</strong> ✓</div>
+                <div><strong>Preferences Information</strong> ✓</div>
+              </div>
+            </div>
+
+            <div class="apm-action">
+              <button id="saveProfileBtn" class="apm-save-profile">
+                Save & Update Profile
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <div id="footerContainer"></div>
+    </div>
+
+    <!-- SUCCESS MODAL -->
+
+    <div class="apm-success-modal" id="apmSuccessModal">
+      <div class="apm-success-content">
+        <div class="apm-success-icon">✓</div>
+
+        <h3>Profile Updated Successfully</h3>
+
+        <p>Applicant profile has been saved and updated successfully.</p>
+
+        <button id="closeProfileModal">Close</button>
+      </div>
+    </div>
+
+    <script>
+      const tabs = document.querySelectorAll(".apm-tab");
+      const contents = document.querySelectorAll(".apm-tab-content");
+
+      function showTab(tabId) {
+        tabs.forEach((tab) => {
+          tab.classList.remove("active");
+        });
+
+        contents.forEach((content) => {
+          content.classList.remove("active");
+        });
+
+        document.querySelector(`[data-tab="${tabId}"]`).classList.add("active");
+
+        document.getElementById(tabId).classList.add("active");
+
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          showTab(tab.dataset.tab);
+        });
+      });
+
+      document.querySelectorAll(".apm-next").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          showTab(btn.dataset.next);
+        });
+      });
+
+      document
+        .getElementById("saveProfileBtn")
+        .addEventListener("click", () => {
+          document.getElementById("apmSuccessModal").classList.add("show");
+        });
+
+      document
+        .getElementById("closeProfileModal")
+        .addEventListener("click", () => {
+          document.getElementById("apmSuccessModal").classList.remove("show");
+        });
+
+      // skills field
+
+      /* SKILL CAPSULE INPUT */
+
+      const apmuSkillInput = document.getElementById("apmuSkillInput");
+      const apmuSkillContainer = document.getElementById("apmuSkillContainer");
+
+      if (apmuSkillInput) {
+        apmuSkillInput.addEventListener("keydown", function (e) {
+          if (e.key === "Enter") {
+            e.preventDefault();
+
+            const skill = this.value.trim();
+
+            if (skill !== "") {
+              const chip = document.createElement("div");
+
+              chip.className = "apmu-skill-chip";
+
+              chip.innerHTML = `
+          ${skill}
+          <span class="apmu-remove-skill">&times;</span>
+        `;
+
+              chip
+                .querySelector(".apmu-remove-skill")
+                .addEventListener("click", function () {
+                  chip.remove();
+                });
+
+              apmuSkillContainer.appendChild(chip);
+
+              this.value = "";
+            }
+          }
+        });
+      }
+
+      // LEFT MENU
+
+      fetch("../inc/leftMenu.html")
+        .then((r) => r.text())
+        .then(
+          (html) =>
+            (document.getElementById("leftMenuContainer").innerHTML = html),
+        );
+
+      // TOP MENU
+
+      fetch("../inc/topMenu.html")
+        .then((r) => r.text())
+        .then((html) => {
+          document.getElementById("topMenuContainer").innerHTML = html;
+
+          setTimeout(() => {
+            const menuToggle = document.getElementById("menuToggle");
+            const sidebar = document.getElementById("sidebar");
+            const overlay = document.getElementById("sidebarOverlay");
+
+            if (menuToggle && sidebar) {
+              menuToggle.addEventListener("click", (e) => {
+                e.stopPropagation();
+
+                sidebar.classList.toggle("active");
+                overlay.classList.toggle("active");
+              });
+            }
+
+            if (overlay) {
+              overlay.addEventListener("click", () => {
+                sidebar.classList.remove("active");
+                overlay.classList.remove("active");
+              });
+            }
+
+            const profileToggle = document.getElementById("profileToggle");
+            const profileMenu = document.getElementById("profileMenu");
+
+            if (profileToggle && profileMenu) {
+              profileToggle.addEventListener("click", (e) => {
+                e.stopPropagation();
+
+                profileMenu.classList.toggle("show");
+              });
+
+              document.addEventListener("click", (e) => {
+                if (!e.target.closest(".profile-dropdown")) {
+                  profileMenu.classList.remove("show");
+                }
+              });
+            }
+          }, 100);
+        });
+
+      // FOOTER
+
+      fetch("../inc/footer.html")
+        .then((r) => r.text())
+        .then(
+          (html) =>
+            (document.getElementById("footerContainer").innerHTML = html),
+        );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Communication With Applicants | MASCO Group</title>
+
+    <meta
+      name="description"
+      content="MASCO Group applicant communication management system. Send interview invitations, recruitment updates and selection result emails to applicants."
+    />
+
+    <meta
+      name="keywords"
+      content="MASCO Group, garments Bangladesh, knitting garments Bangladesh, textile company Bangladesh, recruitment communication, applicant email management, interview invitation, recruitment update"
+    />
+
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="MASCO Group" />
+
+    <link rel="icon" href="../assets/img/masco_logo.png" />
+
+    <link rel="stylesheet" href="../assets/css/leftMenu.css" />
+    <link rel="stylesheet" href="../assets/css/topMenu.css" />
+    <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+  </head>
+
+  <body>
+    <div id="leftMenuContainer"></div>
+
+    <div class="main-layout">
+      <div id="topMenuContainer"></div>
+
+      <main class="page-content">
+        <!-- PAGE TITLE -->
+        <div class="content-card page-title-card">
+          <h2>Communication With Applicants</h2>
+          <p>
+            Send professional emails to applicants regarding interview,
+            recruitment updates and selection results.
+          </p>
+        </div>
+
+        <!-- EMAIL COMPOSER -->
+        <section class="content-card cwa-card">
+          <div class="cwa-header">
+            <h3>Compose Email</h3>
+          </div>
+
+          <div class="cwa-form-grid">
+            <div class="cwa-field">
+              <label>Email Category</label>
+              <select id="emailCategory">
+                <option value="">All Applicants</option>
+                <option value="interview">Interview</option>
+                <option value="recruitment">Recruitment Update</option>
+                <option value="selection">Selection Result</option>
+              </select>
+            </div>
+
+            <div class="cwa-field">
+              <label>Email Subject</label>
+              <input
+                type="text"
+                id="emailSubject"
+                placeholder="Enter email subject"
+              />
+            </div>
+          </div>
+
+          <!-- TOOLBAR -->
+          <div class="cwa-editor-toolbar">
+            <button type="button" onclick="formatText('bold')"><b>B</b></button>
+            <button type="button" onclick="formatText('italic')">
+              <i>I</i>
+            </button>
+            <button type="button" onclick="formatText('underline')">
+              <u>U</u>
+            </button>
+            <button type="button" onclick="formatText('strikeThrough')">
+              <s>S</s>
+            </button>
+            <button type="button" onclick="formatText('insertUnorderedList')">
+              • List
+            </button>
+            <button type="button" onclick="formatText('insertOrderedList')">
+              1. List
+            </button>
+          </div>
+
+          <div id="emailEditor" class="cwa-editor" contenteditable="true"></div>
+
+          <div class="cwa-send-area">
+            <button id="sendEmailBtn" class="cwa-send-btn">Send Email</button>
+          </div>
+        </section>
+
+        <!-- APPLICANT LIST -->
+        <section class="content-card cwa-card">
+          <div class="cwa-list-header">
+            <h3>Applicant List</h3>
+
+            <div class="cwa-list-actions">
+              <button id="resetSelection" class="cwa-reset-btn">Reset</button>
+
+              <button id="bulkSendBtn" class="cwa-bulk-btn">Bulk Send</button>
+            </div>
+          </div>
+
+          <div class="cwa-table-wrapper">
+            <table class="cwa-table">
+              <thead>
+                <tr>
+                  <th><input type="checkbox" id="selectAll" /></th>
+                  <th>SL</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Position</th>
+                  <th>Department</th>
+                  <th>Unit</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td><input type="checkbox" class="rowCheck" /></td>
+                  <td>1</td>
+                  <td>Rahim Ahmed</td>
+                  <td>rahim.ahmed@gmail.com</td>
+                  <td>MIS Executive</td>
+                  <td>MIS & SD</td>
+                  <td>Corporate</td>
+                  <td><span class="cwa-status interview">Interview</span></td>
+                </tr>
+
+                <tr>
+                  <td><input type="checkbox" class="rowCheck" /></td>
+                  <td>2</td>
+                  <td>Nusrat Jahan</td>
+                  <td>nusrat.jahan@gmail.com</td>
+                  <td>HR Executive</td>
+                  <td>HR</td>
+                  <td>Knit</td>
+                  <td><span class="cwa-status update">Update</span></td>
+                </tr>
+
+                <tr>
+                  <td><input type="checkbox" class="rowCheck" /></td>
+                  <td>3</td>
+                  <td>Hasib Khan</td>
+                  <td>hasib.khan@gmail.com</td>
+                  <td>Accounts Officer</td>
+                  <td>Accounts</td>
+                  <td>Woven</td>
+                  <td><span class="cwa-status selected">Selected</span></td>
+                </tr>
+
+                <tr>
+                  <td><input type="checkbox" class="rowCheck" /></td>
+                  <td>4</td>
+                  <td>Sharmin Akter</td>
+                  <td>sharmin.akter@gmail.com</td>
+                  <td>Business Analyst</td>
+                  <td>MIS & SD</td>
+                  <td>Corporate</td>
+                  <td><span class="cwa-status interview">Interview</span></td>
+                </tr>
+
+                <tr>
+                  <td><input type="checkbox" class="rowCheck" /></td>
+                  <td>5</td>
+                  <td>Sabbir Ahmed</td>
+                  <td>sabbir.ahmed@gmail.com</td>
+                  <td>Production Executive</td>
+                  <td>Production</td>
+                  <td>Knit</td>
+                  <td><span class="cwa-status update">Update</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+
+      <div id="footerContainer"></div>
+    </div>
+
+    <!-- SUCCESS MODAL -->
+    <div class="cwa-success-modal" id="successModal">
+      <div class="cwa-success-content">
+        <div class="cwa-success-icon">✓</div>
+        <h3>Email Sent Successfully</h3>
+        <p>Your email has been delivered successfully.</p>
+        <button id="closeSuccessModal">Close</button>
+      </div>
+    </div>
+
+    <script>
+      const emailTemplates = {
+        interview: {
+          subject: "Interview Invitation - MASCO Group",
+          body: `
+<p>Dear Applicant,</p>
+
+<p>We are pleased to invite you for an interview at MASCO Group.</p>
+
+<p><b>Interview Date:</b> [Date]</p>
+<p><b>Interview Time:</b> [Time]</p>
+<p><b>Venue:</b> [Venue]</p>
+
+<p>Please confirm your availability.</p>
+
+<p>Regards,<br>MASCO Group Recruitment Team</p>
+`,
+        },
+
+        recruitment: {
+          subject: "Recruitment Process Update - MASCO Group",
+          body: `
+<p>Dear Applicant,</p>
+
+<p>Thank you for your interest in joining MASCO Group.</p>
+
+<p>Your application is currently under review and progressing through our recruitment process.</p>
+
+<p>We will communicate the next update shortly.</p>
+
+<p>Regards,<br>MASCO Group Recruitment Team</p>
+`,
+        },
+
+        selection: {
+          subject: "Selection Result - MASCO Group",
+          body: `
+<p>Dear Applicant,</p>
+
+<p>Congratulations.</p>
+
+<p>We are pleased to inform you that you have been selected for the position.</p>
+
+<p>Our HR team will contact you with further instructions.</p>
+
+<p>Welcome to MASCO Group.</p>
+
+<p>Regards,<br>MASCO Group Recruitment Team</p>
+`,
+        },
+      };
+
+      const category = document.getElementById("emailCategory");
+      const subject = document.getElementById("emailSubject");
+      const editor = document.getElementById("emailEditor");
+
+      function loadTemplate() {
+        if (category.value === "") {
+          subject.value = "";
+          editor.innerHTML = "";
+          return;
+        }
+
+        const selected = emailTemplates[category.value];
+
+        subject.value = selected.subject;
+        editor.innerHTML = selected.body;
+      }
+
+      function filterApplicantsByCategory() {
+        const selectedCategory = category.value;
+
+        const rows = document.querySelectorAll(".cwa-table tbody tr");
+
+        rows.forEach((row) => {
+          const statusElement = row.querySelector(".cwa-status");
+          const statusText = statusElement.textContent.trim().toLowerCase();
+
+          let showRow = false;
+
+          // Show all
+          if (selectedCategory === "") {
+            showRow = true;
+          }
+
+          // Interview
+          else if (
+            selectedCategory === "interview" &&
+            statusText === "interview"
+          ) {
+            showRow = true;
+          }
+
+          // Recruitment Update
+          else if (
+            selectedCategory === "recruitment" &&
+            statusText === "update"
+          ) {
+            showRow = true;
+          }
+
+          // Selection Result
+          else if (
+            selectedCategory === "selection" &&
+            statusText === "selected"
+          ) {
+            showRow = true;
+          }
+
+          row.style.display = showRow ? "" : "none";
+        });
+      }
+
+      // Initial load
+      category.value = "";
+      loadTemplate();
+      filterApplicantsByCategory();
+
+      category.addEventListener("change", () => {
+        loadTemplate();
+        filterApplicantsByCategory();
+      });
+
+      function formatText(command) {
+        document.execCommand(command, false, null);
+      }
+
+      // Send Email
+      document.getElementById("sendEmailBtn").addEventListener("click", () => {
+        document.getElementById("successModal").classList.add("show");
+      });
+
+      // Bulk Send
+      document.getElementById("bulkSendBtn").addEventListener("click", () => {
+        document.getElementById("successModal").classList.add("show");
+      });
+
+      // Close Success Modal
+      document
+        .getElementById("closeSuccessModal")
+        .addEventListener("click", () => {
+          document.getElementById("successModal").classList.remove("show");
+        });
+
+      // Select All
+      document
+        .getElementById("selectAll")
+        .addEventListener("change", function () {
+          document.querySelectorAll(".rowCheck").forEach((item) => {
+            item.checked = this.checked;
+          });
+        });
+
+      // Reset Selection
+      document
+        .getElementById("resetSelection")
+        .addEventListener("click", () => {
+          document.querySelectorAll(".rowCheck").forEach((item) => {
+            item.checked = false;
+          });
+
+          document.getElementById("selectAll").checked = false;
+
+          // Reset dropdown
+          category.value = "";
+
+          // Clear subject and editor
+          subject.value = "";
+          editor.innerHTML = "";
+
+          // Show all applicants
+          filterApplicantsByCategory();
+        });
+
+      // LEFT MENU
+      fetch("../inc/leftMenu.html")
+        .then((r) => r.text())
+        .then(
+          (html) =>
+            (document.getElementById("leftMenuContainer").innerHTML = html),
+        );
+
+      // TOP MENU
+      fetch("../inc/topMenu.html")
+        .then((r) => r.text())
+        .then((html) => {
+          document.getElementById("topMenuContainer").innerHTML = html;
+
+          setTimeout(() => {
+            const menuToggle = document.getElementById("menuToggle");
+            const sidebar = document.getElementById("sidebar");
+            const overlay = document.getElementById("sidebarOverlay");
+
+            if (menuToggle && sidebar) {
+              menuToggle.addEventListener("click", (e) => {
+                e.stopPropagation();
+                sidebar.classList.toggle("active");
+                overlay.classList.toggle("active");
+              });
+            }
+
+            if (overlay) {
+              overlay.addEventListener("click", () => {
+                sidebar.classList.remove("active");
+                overlay.classList.remove("active");
+              });
+            }
+
+            const profileToggle = document.getElementById("profileToggle");
+            const profileMenu = document.getElementById("profileMenu");
+
+            if (profileToggle && profileMenu) {
+              profileToggle.addEventListener("click", (e) => {
+                e.stopPropagation();
+                profileMenu.classList.toggle("show");
+              });
+
+              document.addEventListener("click", (e) => {
+                if (!e.target.closest(".profile-dropdown")) {
+                  profileMenu.classList.remove("show");
+                }
+              });
+            }
+          }, 100);
+        });
+
+      // FOOTER
+      fetch("../inc/footer.html")
+        .then((r) => r.text())
+        .then(
+          (html) =>
+            (document.getElementById("footerContainer").innerHTML = html),
+        );
+    </script>
+  </body>
+</html>

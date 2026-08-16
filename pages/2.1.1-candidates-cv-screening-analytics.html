@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CV Screening & Analysis | MASCO Recruitment System</title>
+
+    <meta
+      name="description"
+      content="AI-powered CV Screening and Analysis system for MASCO Group. Compare candidate profiles with job requirements and identify the best garments and knitting industry talent in Bangladesh."
+    />
+
+    <meta
+      name="keywords"
+      content="MASCO recruitment, CV screening Bangladesh, garments recruitment software, knitting industry jobs, applicant matching system, HR analytics"
+    />
+
+    <meta name="author" content="MASCO Group" />
+
+    <link rel="icon" href="../assets/img/masco_logo.png" />
+
+    <link rel="stylesheet" href="../assets/css/leftMenu.css" />
+    <link rel="stylesheet" href="../assets/css/topMenu.css" />
+    <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+
+    <style>
+      /* Fix: always a perfect circle regardless of content or screen size */
+      .score-circle {
+        width: 100px;
+        aspect-ratio: 1 / 1; /* forces height = width at all times  */
+        flex-shrink: 0; /* never squish in flex containers      */
+        border-radius: 50%;
+        background: linear-gradient(135deg, #2563eb, #10b981);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .score-circle span {
+        color: #fff;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="leftMenuContainer"></div>
+
+    <div class="main-layout">
+      <div id="topMenuContainer"></div>
+
+      <main class="page-content">
+        <!-- PAGE TITLE -->
+        <div
+          class="page-title-card"
+          style="
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+          "
+        >
+          <h2>CV Screening & Analysis</h2>
+          <p>
+            Candidate profile matching and recruitment suitability assessment
+          </p>
+        </div>
+
+        <!-- MATCHING OVERVIEW -->
+        <div class="screening-layout">
+          <!-- RESUME INFORMATION -->
+          <div class="content-card">
+            <h3 class="analysis-title">Candidate Resume Information</h3>
+
+            <div class="candidate-profile">
+              <img
+                src="../assets/img/profile.jpg"
+                alt="Candidate"
+                class="candidate-avatar"
+              />
+
+              <div>
+                <h3>Rakib Hasan</h3>
+                <p>Senior Executive - IT</p>
+              </div>
+            </div>
+
+            <div class="resume-details">
+              <div class="resume-item">
+                <strong>Experience</strong>
+                <span>5 Years</span>
+              </div>
+
+              <div class="resume-item">
+                <strong>Education</strong>
+                <span>B.Sc. in Computer Science</span>
+              </div>
+
+              <div class="resume-item">
+                <strong>Current Location</strong>
+                <span>Dhaka</span>
+              </div>
+
+              <div class="resume-item">
+                <strong>Expected Salary</strong>
+                <span>BDT 65,000</span>
+              </div>
+
+              <div class="resume-item">
+                <strong>Skills</strong>
+                <span>PHP, Laravel, SQL Server, Excel, Power BI</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- MATCHING RESULT -->
+          <div class="content-card">
+            <h3 class="analysis-title">Job Matching Result</h3>
+
+            <div class="match-score-card">
+              <div class="score-circle">
+                <span>89%</span>
+              </div>
+
+              <div class="score-content">
+                <h3>Excellent Match</h3>
+                <p>
+                  Candidate meets most job requirements and demonstrates strong
+                  technical alignment.
+                </p>
+              </div>
+            </div>
+
+            <div class="matching-bars">
+              <div class="match-row">
+                <span>Skills Match</span>
+                <div class="progress">
+                  <div class="progress-fill" style="width: 95%"></div>
+                </div>
+                <strong>95%</strong>
+              </div>
+
+              <div class="match-row">
+                <span>Experience Match</span>
+                <div class="progress">
+                  <div class="progress-fill" style="width: 88%"></div>
+                </div>
+                <strong>88%</strong>
+              </div>
+
+              <div class="match-row">
+                <span>Education Match</span>
+                <div class="progress">
+                  <div class="progress-fill" style="width: 90%"></div>
+                </div>
+                <strong>90%</strong>
+              </div>
+
+              <div class="match-row">
+                <span>Communication Match</span>
+                <div class="progress">
+                  <div class="progress-fill" style="width: 92%"></div>
+                </div>
+                <strong>92%</strong>
+              </div>
+
+              <div class="match-row">
+                <span>Leadership Match</span>
+                <div class="progress">
+                  <div class="progress-fill" style="width: 82%"></div>
+                </div>
+                <strong>82%</strong>
+              </div>
+
+              <div class="match-row">
+                <span>Location Match</span>
+                <div class="progress">
+                  <div class="progress-fill" style="width: 82%"></div>
+                </div>
+                <strong>82%</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ANALYSIS SECTION -->
+        <div class="dashboard-grid">
+          <div class="content-card">
+            <h3 class="analysis-title">Strength Analysis</h3>
+
+            <ul class="analysis-list">
+              <li>✓ Strong database management experience</li>
+              <li>✓ Relevant industry exposure</li>
+              <li>✓ Required technical skills available</li>
+              <li>✓ Meets education requirements</li>
+            </ul>
+          </div>
+
+          <div class="content-card">
+            <h3 class="analysis-title">Risk Analysis</h3>
+
+            <ul class="analysis-list warning-list">
+              <li>• Salary expectation slightly above range</li>
+              <li>• Limited leadership experience</li>
+              <li>• No overseas project exposure</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- VISUAL ANALYTICS -->
+        <div class="content-card">
+          <h3 class="analysis-title">Candidate Comparison Analytics</h3>
+
+          <div class="cv-analytics-chart-wrapper">
+            <canvas id="candidateRadarChart"></canvas>
+          </div>
+
+          <div class="cv-analytics-summary">
+            <div class="cv-metric-card cv-metric-skill">
+              <h4>Skills Match</h4>
+              <h2>95%</h2>
+            </div>
+
+            <div class="cv-metric-card cv-metric-experience">
+              <h4>Experience Match</h4>
+              <h2>88%</h2>
+            </div>
+
+            <div class="cv-metric-card cv-metric-education">
+              <h4>Education Match</h4>
+              <h2>90%</h2>
+            </div>
+
+            <div class="cv-metric-card cv-metric-communication">
+              <h4>Communication</h4>
+              <h2>92%</h2>
+            </div>
+
+            <div class="cv-metric-card cv-metric-leadership">
+              <h4>Leadership</h4>
+              <h2>75%</h2>
+            </div>
+
+            <div class="cv-metric-card cv-metric-location">
+              <h4>Location Match</h4>
+              <h2>82%</h2>
+            </div>
+          </div>
+        </div>
+
+        <!-- ACTION BUTTONS -->
+        <div class="content-card" style="margin-top: 25px">
+          <div class="screening-actions">
+            <a
+              href="../pages/4-blacklisted-applicants-management.html"
+              class="screening-btn btn-shortlist"
+              >Shortlist</a
+            >
+
+            <a
+              href="../pages/4-blacklisted-applicants-management.html"
+              class="screening-btn btn-later"
+              >Save For Later</a
+            >
+
+            <a href="#" class="screening-btn btn-decline">Decline</a>
+
+            <a href="#" class="screening-btn btn-blacklist">Blacklist</a>
+          </div>
+        </div>
+      </main>
+
+      <div id="footerContainer"></div>
+    </div>
+
+    <!-- BLACKLIST MODAL -->
+    <div class="blacklist-modal-overlay" id="blacklistModal">
+      <div class="blacklist-modal">
+        <div class="blacklist-header">
+          <h3>Blacklist Candidate</h3>
+          <button class="blacklist-close" id="closeBlacklistModal">
+            &times;
+          </button>
+        </div>
+
+        <p class="blacklist-subtitle">
+          Select a reason for blacklisting this candidate.
+        </p>
+
+        <div class="blacklist-options">
+          <label class="blacklist-radio-card">
+            <input type="radio" name="blacklistReason" value="Fraud Activity" />
+            <span>
+              <strong>Fraud Activity</strong>
+              <small>Suspicious or fraudulent recruitment activity.</small>
+            </span>
+          </label>
+
+          <label class="blacklist-radio-card">
+            <input type="radio" name="blacklistReason" value="Fake CV" />
+            <span>
+              <strong>Fake CV</strong>
+              <small>False information or fabricated qualifications.</small>
+            </span>
+          </label>
+
+          <label class="blacklist-radio-card">
+            <input type="radio" name="blacklistReason" value="Misconduct" />
+            <span>
+              <strong>Misconduct</strong>
+              <small>Unprofessional behavior during recruitment process.</small>
+            </span>
+          </label>
+        </div>
+
+        <div class="blacklist-actions">
+          <button class="blacklist-btn-cancel" id="cancelBlacklist">
+            Cancel
+          </button>
+
+          <a href="../pages/4-blacklisted-applicants-management.html">
+            <button class="blacklist-btn-confirm" id="confirmBlacklist">
+              Confirm Blacklist
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      fetch("../inc/leftMenu.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("leftMenuContainer").innerHTML = html;
+        });
+
+      fetch("../inc/topMenu.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("topMenuContainer").innerHTML = html;
+
+          setTimeout(() => {
+            const menuToggle = document.getElementById("menuToggle");
+            const sidebar = document.getElementById("sidebar");
+            const overlay = document.getElementById("sidebarOverlay");
+
+            if (menuToggle && sidebar) {
+              menuToggle.addEventListener("click", (e) => {
+                e.stopPropagation();
+                sidebar.classList.toggle("active");
+
+                if (overlay) {
+                  overlay.classList.toggle("active");
+                }
+              });
+            }
+
+            if (overlay) {
+              overlay.addEventListener("click", () => {
+                sidebar.classList.remove("active");
+                overlay.classList.remove("active");
+              });
+            }
+
+            const profileToggle = document.getElementById("profileToggle");
+            const profileMenu = document.getElementById("profileMenu");
+
+            if (profileToggle && profileMenu) {
+              profileToggle.addEventListener("click", (e) => {
+                e.stopPropagation();
+                profileMenu.classList.toggle("show");
+              });
+
+              document.addEventListener("click", (e) => {
+                if (!e.target.closest(".profile-dropdown")) {
+                  profileMenu.classList.remove("show");
+                }
+              });
+            }
+          }, 80);
+        });
+
+      fetch("../inc/footer.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("footerContainer").innerHTML = html;
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      const radarCtx = document.getElementById("candidateRadarChart");
+
+      new Chart(radarCtx, {
+        type: "radar",
+        data: {
+          labels: [
+            "Skills",
+            "Experience",
+            "Education",
+            "Communication",
+            "Leadership",
+            "Location",
+          ],
+          datasets: [
+            {
+              label: "Candidate Score",
+              data: [95, 88, 90, 92, 75, 82],
+              fill: true,
+              backgroundColor: "rgba(37,99,235,0.15)",
+              borderColor: "#2563eb",
+              borderWidth: 3,
+              pointRadius: 4,
+            },
+            {
+              label: "Job Requirement",
+              data: [90, 100, 100, 100, 100, 100],
+              fill: true,
+              backgroundColor: "rgba(16,185,129,0.12)",
+              borderColor: "#10b981",
+              borderWidth: 3,
+              pointRadius: 4,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: true,
+
+          plugins: {
+            legend: {
+              position: "top",
+            },
+          },
+
+          scales: {
+            r: {
+              min: 0,
+              max: 100,
+              ticks: {
+                stepSize: 20,
+              },
+            },
+          },
+        },
+      });
+    </script>
+    <script>
+      const blacklistBtn = document.querySelector(".btn-blacklist");
+      const blacklistModal = document.getElementById("blacklistModal");
+
+      const closeBlacklistModal = document.getElementById(
+        "closeBlacklistModal",
+      );
+
+      const cancelBlacklist = document.getElementById("cancelBlacklist");
+
+      const confirmBlacklist = document.getElementById("confirmBlacklist");
+
+      blacklistBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        blacklistModal.classList.add("show");
+      });
+
+      function closeModal() {
+        blacklistModal.classList.remove("show");
+      }
+
+      closeBlacklistModal.addEventListener("click", closeModal);
+      cancelBlacklist.addEventListener("click", closeModal);
+
+      blacklistModal.addEventListener("click", function (e) {
+        if (e.target === blacklistModal) {
+          closeModal();
+        }
+      });
+
+      confirmBlacklist.addEventListener("click", function () {
+        const selected = document.querySelector(
+          'input[name="blacklistReason"]:checked',
+        );
+
+        if (!selected) {
+          alert("Please select a blacklist reason.");
+          return;
+        }
+
+        alert("Candidate has been blacklisted for: " + selected.value);
+
+        closeModal();
+      });
+    </script>
+  </body>
+</html>

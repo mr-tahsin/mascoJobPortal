@@ -1,0 +1,136 @@
+.footer {
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 30px;
+}
+
+.footer-content {
+  max-width: 100%;
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.footer-right {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-right a {
+  text-decoration: none;
+  color: #10218b;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .footer-right {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* ==========================================================
+   FOOTER VERSIONS DROPDOWN
+========================================================== */
+
+.footer-version-dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-version-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.footer-version-arrow {
+  font-size: 12px;
+  transition: transform 0.25s ease;
+}
+
+/* Dropdown */
+.footer-version-menu {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 10px);
+
+  min-width: 170px;
+  padding: 8px;
+
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.15);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease,
+    transform 0.2s ease;
+
+  z-index: 1000;
+}
+
+/* Dropdown links */
+.footer-version-menu a {
+  display: block;
+  padding: 10px 13px;
+  border-radius: 8px;
+
+  color: #334155;
+  font-size: 13px;
+  font-weight: 500;
+
+  white-space: nowrap;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.footer-version-menu a:hover {
+  background: #eef4ff;
+  color: #10218b;
+}
+
+/* Hover dropdown */
+.footer-version-dropdown:hover .footer-version-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.footer-version-dropdown:hover .footer-version-arrow {
+  transform: rotate(180deg);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .footer-version-menu {
+    right: auto;
+    left: 50%;
+    transform: translate(-50%, 8px);
+  }
+
+  .footer-version-dropdown:hover .footer-version-menu {
+    transform: translate(-50%, 0);
+  }
+}

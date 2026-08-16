@@ -1,0 +1,148 @@
+.sidebar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 280px;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 1000;
+  background: linear-gradient(
+    rgb(255, 255, 255) 0%,
+    rgb(248, 250, 255) 45%,
+    rgb(242, 246, 255) 100%
+  );
+  border-right: 1px solid rgb(232, 237, 248);
+  box-shadow: rgba(16, 33, 139, 0.06) 8px 0px 25px;
+}
+
+.sidebar-header {
+  padding: 20.5px 20px;
+  background: rgb(16, 33, 139);
+  position: sticky;
+  top: 0px;
+  z-index: 10;
+  box-shadow: rgba(16, 33, 139, 0.15) 0px 3px 15px;
+}
+
+.sidebar-header h2 {
+  color: rgb(255, 255, 255);
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0px;
+}
+
+.sidebar-content {
+  padding: 16px;
+}
+
+.menu-group {
+  margin-bottom: 18px;
+}
+
+.menu-group-title {
+  color: rgb(16, 33, 139);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  padding-left: 5px;
+}
+
+.menu-list {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.menu-list li {
+  margin-bottom: 3px;
+}
+
+.menu-list li a {
+  display: block;
+  text-decoration: none;
+  color: rgb(55, 65, 81);
+  padding: 11px 14px;
+  border-radius: 10px;
+  transition: 0.25s;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid transparent;
+}
+
+.menu-list li a:hover {
+  background: rgb(238, 244, 255);
+  color: rgb(16, 33, 139);
+  transform: translateX(4px);
+}
+
+.menu-list li a.active {
+  background: linear-gradient(
+    135deg,
+    rgba(16, 33, 139, 0.1),
+    rgba(16, 33, 139, 0.05)
+  );
+  color: rgb(16, 33, 139);
+  font-weight: 600;
+  border-left: 4px solid rgb(16, 33, 139);
+  box-shadow: rgba(16, 33, 139, 0.08) 0px 4px 12px;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: rgb(203, 213, 225);
+  border-radius: 20px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: rgb(148, 163, 184);
+}
+
+.sidebar-overlay {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .sidebar {
+    left: -100%;
+    width: 280px;
+    transition: left 0.3s;
+  }
+
+  .sidebar.active {
+    left: 0px;
+  }
+
+  .sidebar-overlay.active {
+    display: block;
+    position: fixed;
+    inset: 0px;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+    backdrop-filter: blur(2px);
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar {
+    width: 270px;
+  }
+
+  .sidebar-header h2 {
+    font-size: 20px;
+  }
+
+  .menu-list li a {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+}

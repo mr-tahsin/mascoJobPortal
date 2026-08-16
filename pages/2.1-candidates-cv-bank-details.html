@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Candidate CV Details | MASCO Recruitment System</title>
+
+    <meta
+      name="description"
+      content="View detailed candidate CV information in MASCO Recruitment System for garments and knitting industry jobs in Bangladesh."
+    />
+    <meta
+      name="keywords"
+      content="MASCO CV details, candidate profile Bangladesh, garment HR system, knitting jobs CV, recruitment Bangladesh"
+    />
+    <meta name="author" content="MASCO Group" />
+
+    <link rel="icon" href="../assets/img/masco_logo.png" />
+
+    <link rel="stylesheet" href="../assets/css/leftMenu.css" />
+    <link rel="stylesheet" href="../assets/css/topMenu.css" />
+    <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+
+    <style>
+      .cv-details-grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 20px;
+      }
+
+      .profile-card {
+        text-align: center;
+      }
+
+      .profile-card img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #10218b;
+        margin-bottom: 15px;
+      }
+
+      .info-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-top: 15px;
+      }
+
+      .info-box {
+        background: #f8fafc;
+        padding: 12px;
+        border-radius: 10px;
+      }
+
+      .info-box h4 {
+        font-size: 12px;
+        color: #6b7280;
+        margin-bottom: 5px;
+      }
+
+      .info-box p {
+        font-size: 14px;
+        color: #111827;
+        font-weight: 600;
+      }
+
+      .tag {
+        display: inline-block;
+        padding: 6px 10px;
+        background: #eef4ff;
+        color: #10218b;
+        border-radius: 20px;
+        font-size: 12px;
+        margin: 4px 4px 0 0;
+      }
+
+      .action-buttons {
+        display: flex;
+        gap: 10px;
+        margin-top: 15px;
+        flex-wrap: wrap;
+      }
+
+      .btn-primary {
+        background: #10218b;
+        color: #fff;
+        padding: 10px 14px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      .btn-secondary {
+        background: #2563eb;
+        color: #fff;
+        padding: 10px 14px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      @media (max-width: 992px) {
+        .cv-details-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="leftMenuContainer"></div>
+
+    <div class="main-layout">
+      <div id="topMenuContainer"></div>
+
+      <main class="page-content">
+        <div class="content-card page-title-card">
+          <h2>Candidate Profile Details</h2>
+          <p>Full CV information</p>
+        </div>
+
+        <div class="cv-details-grid">
+          <!-- LEFT PROFILE -->
+          <div class="content-card profile-card">
+            <img src="../assets/img/profile.jpg" alt="Candidate Photo" />
+            <h3>Rakib Hasan</h3>
+            <p style="color: #6b7280">Laravel Developer</p>
+
+            <div class="action-buttons">
+              <button class="btn-primary">Download CV</button>
+              <a href="2.1.1-candidates-cv-screening-analytics.html"
+                ><button class="btn-secondary">View Analytics</button></a
+              >
+            </div>
+          </div>
+
+          <!-- RIGHT DETAILS -->
+          <div class="content-card">
+            <h3>Personal Information</h3>
+
+            <div class="info-row">
+              <div class="info-box">
+                <h4>Experience</h4>
+                <p>3-5 Years</p>
+              </div>
+
+              <div class="info-box">
+                <h4>Location</h4>
+                <p>Dhaka</p>
+              </div>
+
+              <div class="info-box">
+                <h4>Email</h4>
+                <p>rakib@email.com</p>
+              </div>
+
+              <div class="info-box">
+                <h4>Phone</h4>
+                <p>+880 1XXXXXXXXX</p>
+              </div>
+            </div>
+
+            <h3 style="margin-top: 20px">Skills</h3>
+            <div>
+              <span class="tag">PHP</span>
+              <span class="tag">Laravel</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Excel</span>
+            </div>
+
+            <h3 style="margin-top: 20px">Education</h3>
+            <p style="margin-top: 10px; color: #374151">
+              BSc in Computer Science & Engineering<br />
+              University of Dhaka
+            </p>
+
+            <h3 style="margin-top: 20px">Summary</h3>
+            <p style="margin-top: 10px; color: #374151; line-height: 1.6">
+              Experienced Laravel developer with strong background in backend
+              systems, database design, and HR management systems. Worked in
+              multiple recruitment automation projects for garment industry.
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <div id="footerContainer"></div>
+    </div>
+
+    <script>
+      fetch("../inc/leftMenu.html")
+        .then((r) => r.text())
+        .then((d) => {
+          document.getElementById("leftMenuContainer").innerHTML = d;
+        });
+
+      fetch("../inc/topMenu.html")
+        .then((r) => r.text())
+        .then((d) => {
+          document.getElementById("topMenuContainer").innerHTML = d;
+
+          setTimeout(() => {
+            const menuToggle = document.getElementById("menuToggle");
+            const sidebar = document.getElementById("sidebar");
+            const overlay = document.getElementById("sidebarOverlay");
+
+            if (menuToggle && sidebar) {
+              menuToggle.addEventListener("click", (e) => {
+                e.stopPropagation();
+                sidebar.classList.toggle("active");
+                if (overlay) overlay.classList.toggle("active");
+              });
+            }
+
+            if (overlay) {
+              overlay.addEventListener("click", () => {
+                sidebar.classList.remove("active");
+                overlay.classList.remove("active");
+              });
+            }
+
+            const profileToggle = document.getElementById("profileToggle");
+            const profileMenu = document.getElementById("profileMenu");
+
+            if (profileToggle && profileMenu) {
+              profileToggle.addEventListener("click", (e) => {
+                e.stopPropagation();
+                profileMenu.classList.toggle("show");
+              });
+
+              document.addEventListener("click", (e) => {
+                if (!e.target.closest(".profile-dropdown")) {
+                  profileMenu.classList.remove("show");
+                }
+              });
+            }
+          }, 80);
+        });
+
+      fetch("../inc/footer.html")
+        .then((r) => r.text())
+        .then((d) => {
+          document.getElementById("footerContainer").innerHTML = d;
+        });
+    </script>
+  </body>
+</html>

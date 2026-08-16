@@ -1,0 +1,1067 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Interview Evaluation & Scoring</title>
+    <link rel="icon" href="../assets/img/masco_logo.png" />
+
+    <link rel="stylesheet" href="../assets/css/leftMenu.css" />
+    <link rel="stylesheet" href="../assets/css/topMenu.css" />
+    <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+  </head>
+
+  <body>
+    <div id="leftMenuContainer"></div>
+
+    <div class="main-layout">
+      <div id="topMenuContainer"></div>
+
+      <main class="page-content">
+        <!-- PAGE TITLE -->
+        <div class="content-card page-title-card">
+          <h2>Interview Evaluation & Scoring</h2>
+          <p>Evaluate interview performance and assign candidate scores.</p>
+        </div>
+
+        <div class="ie-toolbar">
+          <button
+            type="button"
+            id="toggleFilter"
+            class="ie-filter-toggle-btn"
+            title="Show / Hide Filters"
+          >
+            ☰
+          </button>
+        </div>
+        <div class="ie-layout">
+          <!-- LEFT SIDE -->
+          <aside class="content-card ie-filter-card">
+            <div class="ie-filter-header">
+              <h3>Filters</h3>
+            </div>
+            <div id="filterContent">
+              <input
+                type="text"
+                id="globalSearch"
+                class="ie-search"
+                placeholder="Search Name / ID"
+              />
+
+              <div class="ie-filter-group">
+                <h4>Unit</h4>
+
+                <label
+                  ><input type="checkbox" class="filter-unit" value="Knit" />
+                  Knit</label
+                >
+                <label
+                  ><input type="checkbox" class="filter-unit" value="Woven" />
+                  Woven</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    class="filter-unit"
+                    value="Corporate"
+                  />
+                  Corporate</label
+                >
+              </div>
+
+              <div class="ie-filter-group">
+                <h4>Department</h4>
+
+                <select id="departmentFilter">
+                  <option value="">All Department</option>
+                  <option>HR</option>
+                  <option>MIS</option>
+                  <option>Accounts</option>
+                  <option>Production</option>
+                </select>
+              </div>
+
+              <div class="ie-filter-group">
+                <h4>Gender</h4>
+
+                <label
+                  ><input type="checkbox" class="filter-gender" value="Male" />
+                  Male</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    class="filter-gender"
+                    value="Female"
+                  />
+                  Female</label
+                >
+              </div>
+
+              <!-- <div class="ie-filter-group">
+                <h4>Status</h4>
+
+                <label
+                  ><input
+                    type="checkbox"
+                    class="filter-status"
+                    value="Shortlist"
+                  />
+                  Shortlist</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    class="filter-status"
+                    value="Decline"
+                  />
+                  Decline</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    class="filter-status"
+                    value="Blacklist"
+                  />
+                  Blacklist</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    class="filter-status"
+                    value="Save for Later"
+                  />
+                  Save for Later</label
+                >
+              </div>
+
+              <div class="ie-filter-group">
+                <h4>Layer</h4>
+
+                <label
+                  ><input type="checkbox" class="filter-layer" value="First" />
+                  First Layer</label
+                >
+                <label
+                  ><input type="checkbox" class="filter-layer" value="Second" />
+                  Second Layer</label
+                >
+                <label
+                  ><input type="checkbox" class="filter-layer" value="Third" />
+                  Third Layer</label
+                >
+              </div> -->
+
+              <div class="ie-filter-group">
+                <h4>Skills</h4>
+
+                <label
+                  ><input type="checkbox" class="filter-skill" value="Excel" />
+                  Excel</label
+                >
+                <label
+                  ><input type="checkbox" class="filter-skill" value="ERP" />
+                  ERP</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    class="filter-skill"
+                    value="Power BI"
+                  />
+                  Power BI</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    class="filter-skill"
+                    value="Recruitment"
+                  />
+                  Recruitment</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    class="filter-skill"
+                    value="Leadership"
+                  />
+                  Leadership</label
+                >
+              </div>
+
+              <button class="ie-reset-btn" id="resetFilters">
+                Reset Filters
+              </button>
+
+              <!-- SCORING -->
+              <div class="content-card scoring-card">
+                <h3 style="margin-bottom: 15px">Scoring System</h3>
+
+                <div class="score-row">
+                  <div class="label">
+                    <span>Excellent</span>
+                    <span>91 - 100</span>
+                  </div>
+                  <div class="score-bar">
+                    <div class="score-fill" style="width: 100%"></div>
+                  </div>
+                </div>
+
+                <div class="score-row">
+                  <div class="label">
+                    <span>Best</span>
+                    <span>68 - 90</span>
+                  </div>
+                  <div class="score-bar">
+                    <div class="score-fill" style="width: 80%"></div>
+                  </div>
+                </div>
+
+                <div class="score-row">
+                  <div class="label">
+                    <span>Good</span>
+                    <span>34 - 67</span>
+                  </div>
+                  <div class="score-bar">
+                    <div class="score-fill" style="width: 60%"></div>
+                  </div>
+                </div>
+
+                <div class="score-row">
+                  <div class="label">
+                    <span>Average</span>
+                    <span>10 - 33</span>
+                  </div>
+                  <div class="score-bar">
+                    <div class="score-fill" style="width: 30%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <!-- RIGHT SIDE -->
+
+          <section class="content-card ie-table-card">
+            <div class="ie-responsive-table">
+              <table class="ie-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <input type="checkbox" id="selectAll" />
+                    </th>
+
+                    <th>SL</th>
+                    <th>Applicant ID</th>
+                    <th>Applicant Name</th>
+                    <th>Applied Role</th>
+                    <th>Gender</th>
+                    <th>Applied Unit</th>
+                    <th>Applied Department</th>
+                    <th>Skills</th>
+                    <th>Marks</th>
+                    <th>Grade</th>
+                    <th>Layer</th>
+                    <th>Status</th>
+                    <th>Marking Date</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="candidateBody">
+                  <tr
+                    data-id="EMP1001"
+                    data-name="Rahim Ahmed"
+                    data-unit="Corporate"
+                    data-department="MIS"
+                    data-gender="Male"
+                    data-skill="Excel,ERP"
+                  >
+                    <td><input class="rowCheck" type="checkbox" /></td>
+                    <td>1</td>
+                    <td>EMP1001</td>
+                    <td>Rahim Ahmed</td>
+                    <td>MIS Executive</td>
+                    <td>Male</td>
+                    <td>Corporate</td>
+                    <td>MIS</td>
+                    <td><span class="skill-pill">Excel</span></td>
+                    <td><input type="number" class="ie-mark-input" /></td>
+                    <td><span class="grade-pill grade-na">N/A</span></td>
+                    <td>
+                      <div class="radio-group">
+                        <label
+                          ><input type="radio" name="layer1" value="First" />
+                          First</label
+                        >
+                        <label
+                          ><input type="radio" name="layer1" value="Second" />
+                          Second</label
+                        >
+                        <label
+                          ><input type="radio" name="layer1" value="Third" />
+                          Third</label
+                        >
+                      </div>
+                    </td>
+                    <td>
+                      <div class="radio-group">
+                        <label
+                          ><input
+                            type="radio"
+                            name="status1"
+                            value="Shortlist"
+                          />
+                          Shortlist</label
+                        >
+                        <label
+                          ><input type="radio" name="status1" value="Decline" />
+                          Decline</label
+                        >
+                        <label
+                          ><input
+                            type="radio"
+                            name="status1"
+                            value="Blacklist"
+                          />
+                          Blacklist</label
+                        >
+                        <label
+                          ><input
+                            type="radio"
+                            name="status1"
+                            value="Save for Later"
+                          />
+                          Save for Later</label
+                        >
+                      </div>
+                    </td>
+                    <td class="systemDate"></td>
+                    <td>
+                      <div class="ie-action-group">
+                        <button class="ie-btn btn-view">Save</button
+                        ><button class="ie-btn btn-analytics">Analytics</button
+                        ><button class="ie-btn btn-row-reset rowReset">
+                          Reset
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr
+                    data-id="EMP1002"
+                    data-name="Nusrat Jahan"
+                    data-unit="Knit"
+                    data-department="HR"
+                    data-gender="Female"
+                    data-skill="Recruitment,Leadership"
+                  >
+                    <td><input class="rowCheck" type="checkbox" /></td>
+                    <td>2</td>
+                    <td>EMP1002</td>
+                    <td>Nusrat Jahan</td>
+                    <td>HR Executive</td>
+                    <td>Female</td>
+                    <td>Knit</td>
+                    <td>HR</td>
+                    <td><span class="skill-pill">Recruitment</span></td>
+                    <td><input type="number" class="ie-mark-input" /></td>
+                    <td><span class="grade-pill grade-na">N/A</span></td>
+                    <td>
+                      <div class="radio-group">
+                        <label
+                          ><input type="radio" name="layer1" value="First" />
+                          First</label
+                        >
+                        <label
+                          ><input type="radio" name="layer1" value="Second" />
+                          Second</label
+                        >
+                        <label
+                          ><input type="radio" name="layer1" value="Third" />
+                          Third</label
+                        >
+                      </div>
+                    </td>
+                    <td>
+                      <div class="radio-group">
+                        <label
+                          ><input
+                            type="radio"
+                            name="status1"
+                            value="Shortlist"
+                          />
+                          Shortlist</label
+                        >
+                        <label
+                          ><input type="radio" name="status1" value="Decline" />
+                          Decline</label
+                        >
+                        <label
+                          ><input
+                            type="radio"
+                            name="status1"
+                            value="Blacklist"
+                          />
+                          Blacklist</label
+                        >
+                        <label
+                          ><input
+                            type="radio"
+                            name="status1"
+                            value="Save for Later"
+                          />
+                          Save for Later</label
+                        >
+                      </div>
+                    </td>
+                    <td class="systemDate"></td>
+                    <td>
+                      <div class="ie-action-group">
+                        <button class="ie-btn btn-view">Save</button
+                        ><button class="ie-btn btn-analytics">Analytics</button
+                        ><button class="ie-btn btn-row-reset rowReset">
+                          Reset
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr
+                    data-id="EMP1003"
+                    data-name="Hasib Khan"
+                    data-unit="Woven"
+                    data-department="Accounts"
+                    data-gender="Male"
+                    data-skill="Excel"
+                  >
+                    <td><input class="rowCheck" type="checkbox" /></td>
+                    <td>3</td>
+                    <td>EMP1003</td>
+                    <td>Hasib Khan</td>
+                    <td>Accounts Officer</td>
+                    <td>Male</td>
+                    <td>Woven</td>
+                    <td>Accounts</td>
+                    <td><span class="skill-pill">Excel</span></td>
+                    <td><input type="number" class="ie-mark-input" /></td>
+                    <td><span class="grade-pill grade-na">N/A</span></td>
+                    <td>
+                      <div class="radio-group">
+                        <label
+                          ><input type="radio" name="layer1" value="First" />
+                          First</label
+                        >
+                        <label
+                          ><input type="radio" name="layer1" value="Second" />
+                          Second</label
+                        >
+                        <label
+                          ><input type="radio" name="layer1" value="Third" />
+                          Third</label
+                        >
+                      </div>
+                    </td>
+                    <td>
+                      <div class="radio-group">
+                        <label
+                          ><input
+                            type="radio"
+                            name="status1"
+                            value="Shortlist"
+                          />
+                          Shortlist</label
+                        >
+                        <label
+                          ><input type="radio" name="status1" value="Decline" />
+                          Decline</label
+                        >
+                        <label
+                          ><input
+                            type="radio"
+                            name="status1"
+                            value="Blacklist"
+                          />
+                          Blacklist</label
+                        >
+                        <label
+                          ><input
+                            type="radio"
+                            name="status1"
+                            value="Save for Later"
+                          />
+                          Save for Later</label
+                        >
+                      </div>
+                    </td>
+                    <td class="systemDate"></td>
+                    <td>
+                      <div class="ie-action-group">
+                        <button class="ie-btn btn-view">Save</button
+                        ><button class="ie-btn btn-analytics">Analytics</button
+                        ><button class="ie-btn btn-row-reset rowReset">
+                          Reset
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr
+                    data-id="EMP1004"
+                    data-name="Sharmin Akter"
+                    data-unit="Corporate"
+                    data-department="MIS"
+                    data-gender="Female"
+                    data-skill="Power BI,ERP"
+                  >
+                    <td><input class="rowCheck" type="checkbox" /></td>
+                    <td>4</td>
+                    <td>EMP1004</td>
+                    <td>Sharmin Akter</td>
+                    <td>Business Analyst</td>
+                    <td>Female</td>
+                    <td>Corporate</td>
+                    <td>MIS</td>
+                    <td><span class="skill-pill">Power BI</span></td>
+                    <td><input type="number" class="ie-mark-input" /></td>
+                    <td><span class="grade-pill grade-na">N/A</span></td>
+                    <td>
+                      <div class="radio-group">
+                        <label
+                          ><input type="radio" name="layer1" value="First" />
+                          First</label
+                        >
+                        <label
+                          ><input type="radio" name="layer1" value="Second" />
+                          Second</label
+                        >
+                        <label
+                          ><input type="radio" name="layer1" value="Third" />
+                          Third</label
+                        >
+                      </div>
+                    </td>
+                    <td>
+                      <div class="radio-group">
+                        <label
+                          ><input
+                            type="radio"
+                            name="status1"
+                            value="Shortlist"
+                          />
+                          Shortlist</label
+                        >
+                        <label
+                          ><input type="radio" name="status1" value="Decline" />
+                          Decline</label
+                        >
+                        <label
+                          ><input
+                            type="radio"
+                            name="status1"
+                            value="Blacklist"
+                          />
+                          Blacklist</label
+                        >
+                        <label
+                          ><input
+                            type="radio"
+                            name="status1"
+                            value="Save for Later"
+                          />
+                          Save for Later</label
+                        >
+                      </div>
+                    </td>
+                    <td class="systemDate"></td>
+                    <td>
+                      <div class="ie-action-group">
+                        <button class="ie-btn btn-view">Save</button
+                        ><button class="ie-btn btn-analytics">Analytics</button
+                        ><button class="ie-btn btn-row-reset rowReset">
+                          Reset
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr
+                    data-id="EMP1005"
+                    data-name="Sabbir Ahmed"
+                    data-unit="Knit"
+                    data-department="Production"
+                    data-gender="Male"
+                    data-skill="Leadership"
+                  >
+                    <td><input class="rowCheck" type="checkbox" /></td>
+                    <td>5</td>
+                    <td>EMP1005</td>
+                    <td>Sabbir Ahmed</td>
+                    <td>Production Executive</td>
+                    <td>Male</td>
+                    <td>Knit</td>
+                    <td>Production</td>
+                    <td><span class="skill-pill">Leadership</span></td>
+                    <td><input type="number" class="ie-mark-input" /></td>
+                    <td><span class="grade-pill grade-na">N/A</span></td>
+                    <td>
+                      <div class="radio-group">
+                        <label
+                          ><input type="radio" name="layer1" value="First" />
+                          First</label
+                        >
+                        <label
+                          ><input type="radio" name="layer1" value="Second" />
+                          Second</label
+                        >
+                        <label
+                          ><input type="radio" name="layer1" value="Third" />
+                          Third</label
+                        >
+                      </div>
+                    </td>
+                    <td>
+                      <div class="radio-group">
+                        <label
+                          ><input
+                            type="radio"
+                            name="status1"
+                            value="Shortlist"
+                          />
+                          Shortlist</label
+                        >
+                        <label
+                          ><input type="radio" name="status1" value="Decline" />
+                          Decline</label
+                        >
+                        <label
+                          ><input
+                            type="radio"
+                            name="status1"
+                            value="Blacklist"
+                          />
+                          Blacklist</label
+                        >
+                        <label
+                          ><input
+                            type="radio"
+                            name="status1"
+                            value="Save for Later"
+                          />
+                          Save for Later</label
+                        >
+                      </div>
+                    </td>
+                    <td class="systemDate"></td>
+                    <td>
+                      <div class="ie-action-group">
+                        <button class="ie-btn btn-view">Save</button
+                        ><button class="ie-btn btn-analytics">Analytics</button
+                        ><button class="ie-btn btn-row-reset rowReset">
+                          Reset
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr
+                    data-id="EMP1006"
+                    data-name="Tania Sultana"
+                    data-unit="Woven"
+                    data-department="HR"
+                    data-gender="Female"
+                    data-skill="Recruitment"
+                  >
+                    <td><input class="rowCheck" type="checkbox" /></td>
+                    <td>6</td>
+                    <td>EMP1006</td>
+                    <td>Tania Sultana</td>
+                    <td>HR Officer</td>
+                    <td>Female</td>
+                    <td>Woven</td>
+                    <td>HR</td>
+                    <td><span class="skill-pill">Recruitment</span></td>
+                    <td><input type="number" class="ie-mark-input" /></td>
+                    <td><span class="grade-pill grade-na">N/A</span></td>
+                    <td>
+                      <div class="radio-group">
+                        <label
+                          ><input type="radio" name="layer1" value="First" />
+                          First</label
+                        >
+                        <label
+                          ><input type="radio" name="layer1" value="Second" />
+                          Second</label
+                        >
+                        <label
+                          ><input type="radio" name="layer1" value="Third" />
+                          Third</label
+                        >
+                      </div>
+                    </td>
+                    <td>
+                      <div class="radio-group">
+                        <label
+                          ><input
+                            type="radio"
+                            name="status1"
+                            value="Shortlist"
+                          />
+                          Shortlist</label
+                        >
+                        <label
+                          ><input type="radio" name="status1" value="Decline" />
+                          Decline</label
+                        >
+                        <label
+                          ><input
+                            type="radio"
+                            name="status1"
+                            value="Blacklist"
+                          />
+                          Blacklist</label
+                        >
+                        <label
+                          ><input
+                            type="radio"
+                            name="status1"
+                            value="Save for Later"
+                          />
+                          Save for Later</label
+                        >
+                      </div>
+                    </td>
+                    <td class="systemDate"></td>
+                    <td>
+                      <div class="ie-action-group">
+                        <button class="ie-btn btn-view">CV</button
+                        ><button class="ie-btn btn-analytics">Analytics</button
+                        ><button class="ie-btn btn-row-reset rowReset">
+                          Reset
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr
+                    data-id="EMP1007"
+                    data-name="Imran Hossain"
+                    data-unit="Corporate"
+                    data-department="Accounts"
+                    data-gender="Male"
+                    data-skill="Excel,Power BI"
+                  ></tr>
+
+                  <tr
+                    data-id="EMP1008"
+                    data-name="Mahbuba Rahman"
+                    data-unit="Knit"
+                    data-department="MIS"
+                    data-gender="Female"
+                    data-skill="ERP"
+                  ></tr>
+
+                  <tr
+                    data-id="EMP1009"
+                    data-name="Mehedi Hasan"
+                    data-unit="Woven"
+                    data-department="Production"
+                    data-gender="Male"
+                    data-skill="Leadership"
+                  ></tr>
+
+                  <tr
+                    data-id="EMP1010"
+                    data-name="Fariha Islam"
+                    data-unit="Corporate"
+                    data-department="HR"
+                    data-gender="Female"
+                    data-skill="Recruitment,ERP"
+                  ></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <div id="footerContainer"></div>
+    </div>
+
+    <script>
+      const today = new Date();
+
+      const dateString = today.toLocaleDateString("en-GB", {
+        weekday: "long",
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+      });
+
+      document.querySelectorAll(".systemDate").forEach((el) => {
+        el.textContent = dateString;
+      });
+
+      /* GRADE */
+
+      document.addEventListener("input", function (e) {
+        if (e.target.classList.contains("ie-mark-input")) {
+          const marks = parseInt(e.target.value) || 0;
+
+          const gradeCell =
+            e.target.parentElement.nextElementSibling.firstElementChild;
+
+          gradeCell.className = "grade-pill";
+
+          if (marks >= 91) {
+            gradeCell.textContent = "Excellent";
+            gradeCell.classList.add("grade-excellent");
+          } else if (marks >= 68) {
+            gradeCell.textContent = "Best";
+            gradeCell.classList.add("grade-best");
+          } else if (marks >= 34) {
+            gradeCell.textContent = "Good";
+            gradeCell.classList.add("grade-good");
+          } else if (marks >= 10) {
+            gradeCell.textContent = "Average";
+            gradeCell.classList.add("grade-average");
+          } else {
+            gradeCell.textContent = "N/A";
+            gradeCell.classList.add("grade-na");
+          }
+        }
+      });
+
+      /* FILTER */
+
+      const search = document.getElementById("globalSearch");
+
+      search.addEventListener("keyup", applyFilters);
+
+      document
+        .querySelectorAll(
+          ".filter-unit,.filter-gender,.filter-layer,.filter-status,.filter-skill,#departmentFilter",
+        )
+        .forEach((x) => {
+          x.addEventListener("change", applyFilters);
+        });
+
+      function applyFilters() {
+        const keyword = document
+          .getElementById("globalSearch")
+          .value.toLowerCase();
+
+        const department = document.getElementById("departmentFilter").value;
+
+        const units = [
+          ...document.querySelectorAll(".filter-unit:checked"),
+        ].map((x) => x.value);
+
+        const genders = [
+          ...document.querySelectorAll(".filter-gender:checked"),
+        ].map((x) => x.value);
+
+        const skills = [
+          ...document.querySelectorAll(".filter-skill:checked"),
+        ].map((x) => x.value);
+
+        document.querySelectorAll("#candidateBody tr").forEach((row) => {
+          const id = row.dataset.id.toLowerCase();
+
+          const name = row.dataset.name.toLowerCase();
+
+          const unit = row.dataset.unit;
+
+          const dept = row.dataset.department;
+
+          const gender = row.dataset.gender;
+
+          const rowSkills = row.dataset.skill.split(",");
+
+          const searchMatch =
+            !keyword || id.includes(keyword) || name.includes(keyword);
+
+          const unitMatch = units.length === 0 || units.includes(unit);
+
+          const deptMatch = !department || department === dept;
+
+          const genderMatch = genders.length === 0 || genders.includes(gender);
+
+          const skillMatch =
+            skills.length === 0 || skills.some((s) => rowSkills.includes(s));
+
+          row.style.display =
+            searchMatch && unitMatch && deptMatch && genderMatch && skillMatch
+              ? ""
+              : "none";
+        });
+      }
+
+      /* RESET FILTER */
+
+      document.getElementById("resetFilters").addEventListener("click", () => {
+        document
+          .querySelectorAll("input[type='checkbox']")
+          .forEach((x) => (x.checked = false));
+
+        search.value = "";
+
+        document
+          .querySelectorAll("#candidateBody tr")
+          .forEach((r) => (r.style.display = ""));
+      });
+
+      /* SELECT ALL */
+
+      document
+        .getElementById("selectAll")
+        .addEventListener("change", function () {
+          document.querySelectorAll(".rowCheck").forEach((c) => {
+            c.checked = this.checked;
+          });
+        });
+
+      /* SAVE ROW */
+
+      document.querySelectorAll(".btn-view").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          const row = this.closest("tr");
+
+          const checkbox = row.querySelector(".rowCheck");
+
+          if (checkbox) {
+            checkbox.checked = true;
+          }
+
+          this.textContent = "Saved";
+          this.disabled = true;
+
+          const allRows = document.querySelectorAll(".rowCheck");
+          const checkedRows = document.querySelectorAll(".rowCheck:checked");
+
+          document.getElementById("selectAll").checked =
+            allRows.length === checkedRows.length;
+        });
+      });
+
+      /* RESET ROW */
+
+      document.querySelectorAll(".rowReset").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          const allSelected = document.getElementById("selectAll").checked;
+
+          if (allSelected) {
+            document.querySelectorAll("#candidateBody tr").forEach(resetRow);
+          } else {
+            resetRow(this.closest("tr"));
+          }
+        });
+      });
+
+      function resetRow(row) {
+        row.querySelector(".ie-mark-input").value = "";
+
+        const grade = row.querySelector(".grade-pill");
+
+        grade.className = "grade-pill grade-na";
+
+        grade.textContent = "N/A";
+
+        row
+          .querySelectorAll("input[type='radio']")
+          .forEach((r) => (r.checked = false));
+
+        row.querySelector(".rowCheck").checked = false;
+        const saveBtn = row.querySelector(".btn-view");
+
+        if (saveBtn) {
+          saveBtn.textContent = "Save";
+          saveBtn.disabled = false;
+        }
+
+        document.getElementById("selectAll").checked = false;
+      }
+
+      const toggleBtn = document.getElementById("toggleFilter");
+      const filterCard = document.querySelector(".ie-filter-card");
+      const layout = document.querySelector(".ie-layout");
+
+      let hidden = false;
+
+      toggleBtn.addEventListener("click", () => {
+        hidden = !hidden;
+
+        if (hidden) {
+          filterCard.style.display = "none";
+          layout.classList.add("ie-filter-hidden");
+        } else {
+          filterCard.style.display = "";
+          layout.classList.remove("ie-filter-hidden");
+        }
+      });
+    </script>
+    <script>
+      // LEFT MENU
+      fetch("../inc/leftMenu.html")
+        .then((r) => r.text())
+        .then(
+          (html) =>
+            (document.getElementById("leftMenuContainer").innerHTML = html),
+        );
+
+      // TOP MENU
+      fetch("../inc/topMenu.html")
+        .then((r) => r.text())
+        .then((html) => {
+          document.getElementById("topMenuContainer").innerHTML = html;
+
+          setTimeout(() => {
+            const menuToggle = document.getElementById("menuToggle");
+            const sidebar = document.getElementById("sidebar");
+            const overlay = document.getElementById("sidebarOverlay");
+
+            if (menuToggle && sidebar) {
+              menuToggle.addEventListener("click", (e) => {
+                e.stopPropagation();
+                sidebar.classList.toggle("active");
+                overlay.classList.toggle("active");
+              });
+            }
+
+            if (overlay) {
+              overlay.addEventListener("click", () => {
+                sidebar.classList.remove("active");
+                overlay.classList.remove("active");
+              });
+            }
+
+            const profileToggle = document.getElementById("profileToggle");
+
+            const profileMenu = document.getElementById("profileMenu");
+
+            if (profileToggle && profileMenu) {
+              profileToggle.addEventListener("click", (e) => {
+                e.stopPropagation();
+                profileMenu.classList.toggle("show");
+              });
+
+              document.addEventListener("click", (e) => {
+                if (!e.target.closest(".profile-dropdown")) {
+                  profileMenu.classList.remove("show");
+                }
+              });
+            }
+          }, 100);
+        });
+
+      // FOOTER
+      fetch("../inc/footer.html")
+        .then((r) => r.text())
+        .then(
+          (html) =>
+            (document.getElementById("footerContainer").innerHTML = html),
+        );
+    </script>
+  </body>
+</html>

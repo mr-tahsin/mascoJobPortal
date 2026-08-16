@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Applicant Resume & Profile Matching | MASCO Group</title>
+
+    <meta
+      name="description"
+      content="MASCO Group Applicant Resume & Profile Matching System. Match applicant profiles with garment, knitting and corporate job opportunities using skill, experience and profile intelligence."
+    />
+
+    <meta
+      name="keywords"
+      content="MASCO Group, applicant profile matching, resume matching Bangladesh, garments jobs Bangladesh, knitting jobs Bangladesh, recruitment software Bangladesh, talent acquisition system"
+    />
+
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="MASCO Group" />
+
+    <link rel="icon" href="../assets/img/masco_logo.png" />
+
+    <link rel="stylesheet" href="../assets/css/leftMenu.css" />
+    <link rel="stylesheet" href="../assets/css/topMenu.css" />
+    <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+  </head>
+
+  <body>
+    <div id="leftMenuContainer"></div>
+
+    <div class="main-layout">
+      <div id="topMenuContainer"></div>
+
+      <main class="page-content">
+        <div class="content-card page-title-card">
+          <h2>Applicant Resume & Profile Matching</h2>
+          <!-- <p>
+            View applicant profile intelligence and discover best matching job
+            opportunities.
+          </p> -->
+        </div>
+
+        <div class="arm-layout">
+          <!-- LEFT PANEL -->
+
+          <aside class="content-card arm-profile-card">
+            <div class="arm-profile-header">
+              <img
+                src="../assets/img/kim_un.png"
+                alt="Applicant"
+                class="arm-avatar"
+              />
+
+              <h3>MD. Tahsin Faruque</h3>
+
+              <span class="arm-profile-badge"> Profile Completed : 90% </span>
+            </div>
+
+            <div class="arm-info-list">
+              <div class="arm-info-item">
+                <strong>Resume Status</strong>
+                <span>Uploaded</span>
+              </div>
+
+              <div class="arm-info-item">
+                <strong>Experience</strong>
+                <span>5 Years</span>
+              </div>
+
+              <div class="arm-info-item">
+                <strong>Preferred Role</strong>
+                <span>MIS Executive</span>
+              </div>
+
+              <div class="arm-info-item">
+                <strong>System Recommended Role</strong>
+                <span>Business Analyst</span>
+              </div>
+            </div>
+
+            <div class="arm-section">
+              <h4>Skills</h4>
+
+              <div class="arm-skill-wrap">
+                <span>Excel</span>
+                <span>Power BI</span>
+                <span>SQL</span>
+                <span>ERP</span>
+                <span>Reporting</span>
+                <span>Data Analysis</span>
+              </div>
+            </div>
+          </aside>
+
+          <!-- RIGHT PANEL -->
+
+          <section class="content-card arm-job-card">
+            <div class="arm-filter-bar">
+              <input
+                type="text"
+                id="jobSearch"
+                placeholder="Search Job Title..."
+              />
+
+              <select id="matchFilter">
+                <option value="">All Match Levels</option>
+                <option value="high">High Match</option>
+                <option value="medium">Medium Match</option>
+                <option value="low">Low Match</option>
+              </select>
+            </div>
+
+            <div class="arm-job-list" id="jobList">
+              <div
+                class="arm-job-item"
+                data-title="Business Analyst"
+                data-match="high"
+              >
+                <div class="arm-job-top">
+                  <h3>Business Analyst</h3>
+
+                  <span class="arm-match-score high">94% Match</span>
+                </div>
+
+                <div class="arm-job-skills">
+                  <span>SQL</span>
+                  <span>Power BI</span>
+                  <span>Reporting</span>
+                </div>
+
+                <a href="../pages/9.2-job-listing-details.html"
+                  ><button class="arm-view-btn">View Details</button></a
+                >
+              </div>
+
+              <div
+                class="arm-job-item"
+                data-title="MIS Executive"
+                data-match="high"
+              >
+                <div class="arm-job-top">
+                  <h3>MIS Executive</h3>
+
+                  <span class="arm-match-score high">91% Match</span>
+                </div>
+
+                <div class="arm-job-skills">
+                  <span>Excel</span>
+                  <span>ERP</span>
+                  <span>Reporting</span>
+                </div>
+
+                <a href="../pages/9.2-job-listing-details.html"
+                  ><button class="arm-view-btn">View Details</button></a
+                >
+              </div>
+
+              <div
+                class="arm-job-item"
+                data-title="HR Executive"
+                data-match="medium"
+              >
+                <div class="arm-job-top">
+                  <h3>HR Executive</h3>
+
+                  <span class="arm-match-score medium">82% Match</span>
+                </div>
+
+                <div class="arm-job-skills">
+                  <span>Recruitment</span>
+                  <span>Communication</span>
+                  <span>MS Office</span>
+                </div>
+
+                <a href="../pages/9.2-job-listing-details.html"
+                  ><button class="arm-view-btn">View Details</button></a
+                >
+              </div>
+
+              <div
+                class="arm-job-item"
+                data-title="Accounts Officer"
+                data-match="medium"
+              >
+                <div class="arm-job-top">
+                  <h3>Accounts Officer</h3>
+
+                  <span class="arm-match-score medium">76% Match</span>
+                </div>
+
+                <div class="arm-job-skills">
+                  <span>Accounting</span>
+                  <span>ERP</span>
+                  <span>Finance</span>
+                </div>
+
+                <a href="../pages/9.2-job-listing-details.html"
+                  ><button class="arm-view-btn">View Details</button></a
+                >
+              </div>
+
+              <div
+                class="arm-job-item"
+                data-title="Production Executive"
+                data-match="low"
+              >
+                <div class="arm-job-top">
+                  <h3>Production Executive</h3>
+
+                  <span class="arm-match-score low">58% Match</span>
+                </div>
+
+                <div class="arm-job-skills">
+                  <span>Production</span>
+                  <span>Planning</span>
+                  <span>Factory Ops</span>
+                </div>
+
+                <a href="../pages/9.2-job-listing-details.html"
+                  ><button class="arm-view-btn">View Details</button></a
+                >
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <div id="footerContainer"></div>
+    </div>
+
+    <script>
+      const jobSearch = document.getElementById("jobSearch");
+      const matchFilter = document.getElementById("matchFilter");
+
+      function filterJobs() {
+        const keyword = jobSearch.value.toLowerCase();
+        const match = matchFilter.value;
+
+        document.querySelectorAll(".arm-job-item").forEach((job) => {
+          const title = job.dataset.title.toLowerCase();
+          const level = job.dataset.match;
+
+          const searchMatch = !keyword || title.includes(keyword);
+
+          const levelMatch = !match || level === match;
+
+          job.style.display = searchMatch && levelMatch ? "" : "none";
+        });
+      }
+
+      jobSearch.addEventListener("keyup", filterJobs);
+      matchFilter.addEventListener("change", filterJobs);
+
+      // LEFT MENU
+
+      fetch("../inc/leftMenu.html")
+        .then((r) => r.text())
+        .then(
+          (html) =>
+            (document.getElementById("leftMenuContainer").innerHTML = html),
+        );
+
+      // TOP MENU
+
+      fetch("../inc/topMenu.html")
+        .then((r) => r.text())
+        .then((html) => {
+          document.getElementById("topMenuContainer").innerHTML = html;
+
+          setTimeout(() => {
+            const menuToggle = document.getElementById("menuToggle");
+            const sidebar = document.getElementById("sidebar");
+            const overlay = document.getElementById("sidebarOverlay");
+
+            if (menuToggle && sidebar) {
+              menuToggle.addEventListener("click", (e) => {
+                e.stopPropagation();
+                sidebar.classList.toggle("active");
+                overlay.classList.toggle("active");
+              });
+            }
+
+            if (overlay) {
+              overlay.addEventListener("click", () => {
+                sidebar.classList.remove("active");
+                overlay.classList.remove("active");
+              });
+            }
+
+            const profileToggle = document.getElementById("profileToggle");
+            const profileMenu = document.getElementById("profileMenu");
+
+            if (profileToggle && profileMenu) {
+              profileToggle.addEventListener("click", (e) => {
+                e.stopPropagation();
+                profileMenu.classList.toggle("show");
+              });
+
+              document.addEventListener("click", (e) => {
+                if (!e.target.closest(".profile-dropdown")) {
+                  profileMenu.classList.remove("show");
+                }
+              });
+            }
+          }, 100);
+        });
+
+      // FOOTER
+
+      fetch("../inc/footer.html")
+        .then((r) => r.text())
+        .then(
+          (html) =>
+            (document.getElementById("footerContainer").innerHTML = html),
+        );
+    </script>
+  </body>
+</html>

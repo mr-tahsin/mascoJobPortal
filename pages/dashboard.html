@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>
+      Dashboard | MASCO Job Portal - Garments & Knitting Recruitment Bangladesh
+    </title>
+
+    <meta
+      name="description"
+      content="MASCO Job Portal Dashboard. Manage recruitment, job vacancies, applicants, interviews and hiring activities for Bangladesh garment and knitting industries."
+    />
+
+    <meta
+      name="keywords"
+      content="MASCO Group, garment recruitment Bangladesh, knitting recruitment Bangladesh, textile jobs Bangladesh, HR dashboard, recruitment software, apparel industry hiring"
+    />
+
+    <meta name="author" content="MASCO Group" />
+    <meta name="robots" content="index,follow" />
+
+    <link rel="icon" href="../assets/img/masco_logo.png" />
+
+    <link rel="stylesheet" href="../assets/css/leftMenu.css" />
+    <link rel="stylesheet" href="../assets/css/topMenu.css" />
+    <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <body>
+    <!-- LEFT MENU -->
+    <div id="leftMenuContainer"></div>
+
+    <!-- MAIN LAYOUT -->
+    <div class="main-layout">
+      <!-- TOP MENU -->
+      <div id="topMenuContainer"></div>
+
+      <!-- PAGE CONTENT -->
+      <main class="page-content">
+        <!-- DASHBOARD HERO -->
+        <section class="masco-dashboard-hero">
+          <div class="masco-dashboard-hero-left">
+            <span class="masco-dashboard-badge">
+              Recruitment Management Dashboard
+            </span>
+
+            <h1>Welcome Back, <b>Tahsin Faruque</b></h1>
+
+            <p>
+              Monitor vacancies, applicants, interviews and hiring progress
+              across all MASCO Group companies from a single dashboard.
+            </p>
+          </div>
+
+          <div class="masco-dashboard-hero-right">
+            <div class="masco-dashboard-date-card">
+              <h4>Today's Summary</h4>
+              <h2 id="currentDate"></h2>
+            </div>
+          </div>
+        </section>
+
+        <!-- STATISTICS -->
+        <section class="dashboard-cards">
+          <div class="dashboard-card dashboard-card-applicants">
+            <div class="dashboard-card-icon">👥</div>
+
+            <div>
+              <h2>1,250</h2>
+              <p>Total Applicants</p>
+            </div>
+          </div>
+
+          <div class="dashboard-card dashboard-card-vacancies">
+            <div class="dashboard-card-icon">💼</div>
+
+            <div>
+              <h2>48</h2>
+              <p>Open Vacancies</p>
+            </div>
+          </div>
+
+          <div class="dashboard-card dashboard-card-shortlist">
+            <div class="dashboard-card-icon">✅</div>
+
+            <div>
+              <h2>320</h2>
+              <p>Shortlisted</p>
+            </div>
+          </div>
+
+          <div class="dashboard-card dashboard-card-interview">
+            <div class="dashboard-card-icon">📅</div>
+
+            <div>
+              <h2>67</h2>
+              <p>Interviews Scheduled</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- QUICK ACTIONS -->
+        <section class="masco-dashboard-actions">
+          <button
+            class="masco-dashboard-action-btn"
+            onclick="location.href = '1-job-vacancy-management.html'"
+          >
+            ➕ Create Vacancy
+          </button>
+
+          <button
+            class="masco-dashboard-action-btn"
+            onclick="location.href = '2-candidates-cv-bank.html'"
+          >
+            👤 View Applicants
+          </button>
+
+          <button
+            class="masco-dashboard-action-btn"
+            onclick="location.href = '5-communication-with-applicants.html'"
+          >
+            📋 Communicate with Applicants
+          </button>
+
+          <button
+            class="masco-dashboard-action-btn"
+            onclick="location.href = '10-settings.html'"
+          >
+            ⚙ Settings
+          </button>
+        </section>
+
+        <!-- CHARTS -->
+        <section class="dashboard-grid">
+          <div class="content-card">
+            <div class="masco-card-header">
+              <h3>Monthly Applications</h3>
+              <span>2026</span>
+            </div>
+
+            <canvas id="applicationChart"></canvas>
+          </div>
+
+          <div class="content-card">
+            <div class="masco-card-header">
+              <h3>Applicant Status Overview</h3>
+              <span>Live</span>
+            </div>
+
+            <canvas id="statusChart"></canvas>
+          </div>
+        </section>
+
+        <!-- KPI SECTION -->
+        <section class="dashboard-grid">
+          <div class="content-card">
+            <div class="masco-card-header">
+              <h3>Recruitment Performance</h3>
+            </div>
+
+            <div class="masco-kpi-grid">
+              <div class="masco-kpi-item">
+                <h2>89%</h2>
+                <span>Hiring Success</span>
+              </div>
+
+              <div class="masco-kpi-item">
+                <h2>14</h2>
+                <span>Days Avg Hiring</span>
+              </div>
+
+              <div class="masco-kpi-item">
+                <h2>94%</h2>
+                <span>Interview Attendance</span>
+              </div>
+
+              <div class="masco-kpi-item">
+                <h2>31</h2>
+                <span>New Hires</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <div class="masco-card-header">
+              <h3>Today's Activity</h3>
+            </div>
+
+            <ul class="masco-dashboard-activity">
+              <li>✔ 15 new applications received</li>
+              <li>✔ 8 candidates shortlisted</li>
+              <li>✔ 4 interviews completed</li>
+              <li>✔ 2 offers issued</li>
+              <li>✔ 1 candidate onboarded</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- RECENT APPLICATIONS -->
+        <section class="content-card">
+          <div class="masco-card-header">
+            <h3>Recent Applications</h3>
+
+            <button class="reset-filter-btn">View All</button>
+          </div>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Applicant Name</th>
+                <th>Position</th>
+                <th>Department</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Arefin Islam</td>
+                <td>Software Engineer</td>
+                <td>IT</td>
+                <td><span class="masco-status-shortlist">Shortlisted</span></td>
+              </tr>
+
+              <tr>
+                <td>Sarah Khan</td>
+                <td>HR Officer</td>
+                <td>HR</td>
+                <td><span class="masco-status-pending">Pending</span></td>
+              </tr>
+
+              <tr>
+                <td>Subhash Barua</td>
+                <td>Business Analyst</td>
+                <td>MIS</td>
+                <td><span class="masco-status-interview">Interview</span></td>
+              </tr>
+
+              <tr>
+                <td>Arafat Rony</td>
+                <td>Merchandiser</td>
+                <td>Merchandising</td>
+                <td><span class="masco-status-shortlist">Shortlisted</span></td>
+              </tr>
+
+              <tr>
+                <td>Ashiqul Islam</td>
+                <td>Compliance Officer</td>
+                <td>Compliance</td>
+                <td><span class="masco-status-pending">Pending</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+
+      <!-- FOOTER -->
+      <div id="footerContainer"></div>
+    </div>
+
+    <script>
+      // LEFT MENU LOAD
+      fetch("../inc/leftMenu.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("leftMenuContainer").innerHTML = html;
+        });
+
+      // TOP MENU LOAD
+      fetch("../inc/topMenu.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("topMenuContainer").innerHTML = html;
+
+          setTimeout(() => {
+            const menuToggle = document.getElementById("menuToggle");
+            const sidebar = document.getElementById("sidebar");
+            const overlay = document.getElementById("sidebarOverlay");
+
+            if (menuToggle && sidebar) {
+              menuToggle.addEventListener("click", (e) => {
+                e.stopPropagation();
+                sidebar.classList.toggle("active");
+
+                if (overlay) overlay.classList.toggle("active");
+              });
+            }
+
+            if (overlay) {
+              overlay.addEventListener("click", () => {
+                sidebar.classList.remove("active");
+                overlay.classList.remove("active");
+              });
+            }
+
+            const profileToggle = document.getElementById("profileToggle");
+            const profileMenu = document.getElementById("profileMenu");
+
+            if (profileToggle && profileMenu) {
+              profileToggle.addEventListener("click", (e) => {
+                e.stopPropagation();
+                profileMenu.classList.toggle("show");
+              });
+
+              document.addEventListener("click", (e) => {
+                if (!e.target.closest(".profile-dropdown")) {
+                  profileMenu.classList.remove("show");
+                }
+              });
+            }
+          }, 50);
+        });
+
+      // FOOTER LOAD
+      fetch("../inc/footer.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("footerContainer").innerHTML = html;
+        });
+
+      // CURRENT DATE
+      document.addEventListener("DOMContentLoaded", () => {
+        const today = new Date();
+
+        document.getElementById("currentDate").textContent =
+          today.toLocaleDateString("en-GB", {
+            day: "2-digit",
+            month: "short",
+            year: "numeric",
+          });
+
+        // APPLICATION CHART
+        new Chart(document.getElementById("applicationChart"), {
+          type: "line",
+          data: {
+            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
+            datasets: [
+              {
+                label: "Applications",
+                data: [90, 140, 180, 220, 200, 280, 310, 350],
+                borderColor: "#10218b",
+                backgroundColor: "rgba(16,33,139,.08)",
+                tension: 0.4,
+                fill: true,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+          },
+        });
+
+        // STATUS CHART
+        new Chart(document.getElementById("statusChart"), {
+          type: "doughnut",
+          data: {
+            labels: ["Pending", "Shortlisted", "Interview", "Rejected"],
+            datasets: [
+              {
+                data: [35, 30, 20, 15],
+                backgroundColor: ["#f59e0b", "#16a34a", "#2563eb", "#ef4444"],
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

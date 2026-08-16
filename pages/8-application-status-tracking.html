@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Application Status Tracking | MASCO Group</title>
+
+    <meta
+      name="description"
+      content="Track applicant recruitment progress at MASCO Group. Monitor CV screening, interview, approval and final selection status through a modern recruitment workflow."
+    />
+
+    <meta
+      name="keywords"
+      content="MASCO Group, application tracking system, recruitment workflow, applicant tracking Bangladesh, garments recruitment Bangladesh, knitting recruitment Bangladesh, ATS system"
+    />
+
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="MASCO Group" />
+
+    <link rel="icon" href="../assets/img/masco_logo.png" />
+
+    <link rel="stylesheet" href="../assets/css/leftMenu.css" />
+    <link rel="stylesheet" href="../assets/css/topMenu.css" />
+    <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+  </head>
+
+  <body>
+    <div id="leftMenuContainer"></div>
+
+    <div class="main-layout">
+      <div id="topMenuContainer"></div>
+
+      <main class="page-content">
+        <div class="content-card page-title-card">
+          <h2>Application Status Tracking</h2>
+          <p>
+            Track applicant progression from application submission to final
+            selection.
+          </p>
+        </div>
+
+        <div class="content-card ast-filter-card">
+          <div class="ast-toolbar">
+            <button
+              type="button"
+              id="astToggleFilter"
+              class="ast-filter-toggle-btn"
+              title="Show / Hide Filters"
+            >
+              ☰
+            </button>
+          </div>
+
+          <div class="ast-layout">
+            <aside class="ast-filter-panel">
+              <input
+                type="text"
+                id="roleSearch"
+                class="ast-search"
+                placeholder="Search Role Name..."
+              />
+
+              <div class="ast-filter-group">
+                <h4>Stage Filter</h4>
+
+                <label>
+                  <input type="checkbox" class="stageFilter" value="cv" />
+                  CV Screen
+                </label>
+
+                <label>
+                  <input
+                    type="checkbox"
+                    class="stageFilter"
+                    value="interview"
+                  />
+                  Interview
+                </label>
+
+                <label>
+                  <input type="checkbox" class="stageFilter" value="approval" />
+                  Approval
+                </label>
+
+                <label>
+                  <input
+                    type="checkbox"
+                    class="stageFilter"
+                    value="selection"
+                  />
+                  Final Selection
+                </label>
+              </div>
+
+              <button id="astResetBtn" class="ast-reset-btn">
+                Reset Filters
+              </button>
+            </aside>
+
+            <section class="ast-content-area">
+              <div id="timelineContainer">
+                <!-- CARD 1 -->
+
+                <div class="ast-card" data-role="MIS Executive" data-stage="cv">
+                  <div class="ast-card-header">
+                    <h3>MIS Executive</h3>
+                    <span class="ast-stage-label">CV Screening Stage</span>
+                  </div>
+
+                  <div class="ast-timeline">
+                    <div class="ast-step success">
+                      <div class="ast-dot"></div>
+                      <h4>Application Submitted</h4>
+                      <p>10 May 2026</p>
+                    </div>
+
+                    <div class="ast-step success">
+                      <div class="ast-dot"></div>
+                      <h4>Screening Passed</h4>
+                      <p>12 May 2026</p>
+                    </div>
+
+                    <div class="ast-step pending">
+                      <div class="ast-dot"></div>
+                      <h4>Interview</h4>
+                      <p>Pending</p>
+                    </div>
+
+                    <div class="ast-step pending">
+                      <div class="ast-dot"></div>
+                      <h4>Approval</h4>
+                      <p>Pending</p>
+                    </div>
+
+                    <div class="ast-step pending">
+                      <div class="ast-dot"></div>
+                      <h4>Final Selection</h4>
+                      <p>Pending</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- CARD 2 -->
+
+                <div
+                  class="ast-card"
+                  data-role="Business Analyst"
+                  data-stage="interview"
+                >
+                  <div class="ast-card-header">
+                    <h3>Business Analyst</h3>
+                    <span class="ast-stage-label">Interview Stage</span>
+                  </div>
+
+                  <div class="ast-timeline">
+                    <div class="ast-step success">
+                      <div class="ast-dot"></div>
+                      <h4>Application Submitted</h4>
+                      <p>10 May 2026</p>
+                    </div>
+
+                    <div class="ast-step success">
+                      <div class="ast-dot"></div>
+                      <h4>Screening Passed</h4>
+                      <p>13 May 2026</p>
+                    </div>
+
+                    <div class="ast-step processing">
+                      <div class="ast-dot"></div>
+                      <h4>Interview Processing</h4>
+                      <p>15 May 2026</p>
+                    </div>
+
+                    <div class="ast-step pending">
+                      <div class="ast-dot"></div>
+                      <h4>Approval</h4>
+                      <p>Pending</p>
+                    </div>
+
+                    <div class="ast-step pending">
+                      <div class="ast-dot"></div>
+                      <h4>Final Selection</h4>
+                      <p>Pending</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- CARD 3 -->
+
+                <div
+                  class="ast-card"
+                  data-role="HR Executive"
+                  data-stage="approval"
+                >
+                  <div class="ast-card-header">
+                    <h3>HR Executive</h3>
+                    <span class="ast-stage-label">Approval Stage</span>
+                  </div>
+
+                  <div class="ast-timeline">
+                    <div class="ast-step success">
+                      <div class="ast-dot"></div>
+                      <h4>Application Submitted</h4>
+                      <p>10 May 2026</p>
+                    </div>
+
+                    <div class="ast-step success">
+                      <div class="ast-dot"></div>
+                      <h4>Screening Passed</h4>
+                      <p>12 May 2026</p>
+                    </div>
+
+                    <div class="ast-step success">
+                      <div class="ast-dot"></div>
+                      <h4>Shortlisted</h4>
+                      <p>17 May 2026</p>
+                    </div>
+
+                    <div class="ast-step processing">
+                      <div class="ast-dot"></div>
+                      <h4>Approval Processing</h4>
+                      <p>19 May 2026</p>
+                    </div>
+
+                    <div class="ast-step pending">
+                      <div class="ast-dot"></div>
+                      <h4>Final Selection</h4>
+                      <p>Pending</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- CARD 4 -->
+
+                <div
+                  class="ast-card"
+                  data-role="Accounts Officer"
+                  data-stage="selection"
+                >
+                  <div class="ast-card-header">
+                    <h3>Accounts Officer</h3>
+                    <span class="ast-stage-label">Final Selection Stage</span>
+                  </div>
+
+                  <div class="ast-timeline">
+                    <div class="ast-step success">
+                      <div class="ast-dot"></div>
+                      <h4>Application Submitted</h4>
+                      <p>10 May 2026</p>
+                    </div>
+
+                    <div class="ast-step success">
+                      <div class="ast-dot"></div>
+                      <h4>Screening Passed</h4>
+                      <p>12 May 2026</p>
+                    </div>
+
+                    <div class="ast-step success">
+                      <div class="ast-dot"></div>
+                      <h4>Shortlisted</h4>
+                      <p>16 May 2026</p>
+                    </div>
+
+                    <div class="ast-step success">
+                      <div class="ast-dot"></div>
+                      <h4>Approved</h4>
+                      <p>20 May 2026</p>
+                    </div>
+
+                    <div class="ast-step processing">
+                      <div class="ast-dot"></div>
+                      <h4>Application Processing</h4>
+                      <p>22 May 2026</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- CARD 5 -->
+
+                <div
+                  class="ast-card"
+                  data-role="Production Executive"
+                  data-stage="interview"
+                >
+                  <div class="ast-card-header">
+                    <h3>Production Executive</h3>
+                    <span class="ast-stage-label">Future Pool</span>
+                  </div>
+
+                  <div class="ast-timeline">
+                    <div class="ast-step success">
+                      <div class="ast-dot"></div>
+                      <h4>Application Submitted</h4>
+                      <p>10 May 2026</p>
+                    </div>
+
+                    <div class="ast-step future">
+                      <div class="ast-dot"></div>
+                      <h4>Keep In Future Pool</h4>
+                      <p>13 May 2026</p>
+                    </div>
+
+                    <div class="ast-step pending">
+                      <div class="ast-dot"></div>
+                      <h4>Interview</h4>
+                      <p>Pending</p>
+                    </div>
+
+                    <div class="ast-step pending">
+                      <div class="ast-dot"></div>
+                      <h4>Approval</h4>
+                      <p>Pending</p>
+                    </div>
+
+                    <div class="ast-step pending">
+                      <div class="ast-dot"></div>
+                      <h4>Final Selection</h4>
+                      <p>Pending</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- CARD 6 -->
+
+                <div
+                  class="ast-card"
+                  data-role="Finance Data Analyst"
+                  data-stage="selection"
+                >
+                  <div class="ast-card-header">
+                    <h3>Finance Data Analyst</h3>
+
+                    <span class="ast-stage-label">Successfully Onboarded</span>
+                  </div>
+
+                  <div class="ast-timeline">
+                    <div class="ast-step success">
+                      <div class="ast-dot"></div>
+                      <h4>Application Submitted</h4>
+                      <p>10 May 2026</p>
+                    </div>
+
+                    <div class="ast-step success">
+                      <div class="ast-dot"></div>
+                      <h4>Screening Passed</h4>
+                      <p>12 May 2026</p>
+                    </div>
+
+                    <div class="ast-step success">
+                      <div class="ast-dot"></div>
+                      <h4>Shortlisted</h4>
+                      <p>16 May 2026</p>
+                    </div>
+
+                    <div class="ast-step success">
+                      <div class="ast-dot"></div>
+                      <h4>Approved</h4>
+                      <p>20 May 2026</p>
+                    </div>
+
+                    <div class="ast-step success">
+                      <div class="ast-dot"></div>
+                      <h4>Selected & Onboarded</h4>
+                      <p>25 May 2026</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+
+      <div id="footerContainer"></div>
+    </div>
+
+    <script>
+      const roleSearch = document.getElementById("roleSearch");
+      const stageFilters = document.querySelectorAll(".stageFilter");
+
+      function filterCards() {
+        const keyword = roleSearch.value.toLowerCase();
+
+        const selectedStages = [
+          ...document.querySelectorAll(".stageFilter:checked"),
+        ].map((x) => x.value);
+
+        document.querySelectorAll(".ast-card").forEach((card) => {
+          const role = card.dataset.role.toLowerCase();
+          const stage = card.dataset.stage;
+
+          const roleMatch = keyword === "" || role.includes(keyword);
+
+          const stageMatch =
+            selectedStages.length === 0 || selectedStages.includes(stage);
+
+          card.style.display = roleMatch && stageMatch ? "" : "none";
+        });
+      }
+
+      roleSearch.addEventListener("keyup", filterCards);
+
+      stageFilters.forEach((item) => {
+        item.addEventListener("change", filterCards);
+      });
+
+      document.getElementById("astResetBtn").addEventListener("click", () => {
+        roleSearch.value = "";
+
+        document
+          .querySelectorAll(".stageFilter")
+          .forEach((x) => (x.checked = false));
+
+        filterCards();
+      });
+
+      const astToggleFilter = document.getElementById("astToggleFilter");
+
+      const astFilterPanel = document.querySelector(".ast-filter-panel");
+
+      const astLayout = document.querySelector(".ast-layout");
+
+      let astHidden = false;
+
+      astToggleFilter.addEventListener("click", () => {
+        astHidden = !astHidden;
+
+        if (astHidden) {
+          astFilterPanel.style.display = "none";
+          astLayout.classList.add("ast-filter-hidden");
+        } else {
+          astFilterPanel.style.display = "";
+          astLayout.classList.remove("ast-filter-hidden");
+        }
+      });
+
+      // LEFT MENU
+
+      fetch("../inc/leftMenu.html")
+        .then((r) => r.text())
+        .then(
+          (html) =>
+            (document.getElementById("leftMenuContainer").innerHTML = html),
+        );
+
+      // TOP MENU
+
+      fetch("../inc/topMenu.html")
+        .then((r) => r.text())
+        .then((html) => {
+          document.getElementById("topMenuContainer").innerHTML = html;
+
+          setTimeout(() => {
+            const menuToggle = document.getElementById("menuToggle");
+            const sidebar = document.getElementById("sidebar");
+            const overlay = document.getElementById("sidebarOverlay");
+
+            if (menuToggle && sidebar) {
+              menuToggle.addEventListener("click", (e) => {
+                e.stopPropagation();
+                sidebar.classList.toggle("active");
+                overlay.classList.toggle("active");
+              });
+            }
+
+            if (overlay) {
+              overlay.addEventListener("click", () => {
+                sidebar.classList.remove("active");
+                overlay.classList.remove("active");
+              });
+            }
+
+            const profileToggle = document.getElementById("profileToggle");
+
+            const profileMenu = document.getElementById("profileMenu");
+
+            if (profileToggle && profileMenu) {
+              profileToggle.addEventListener("click", (e) => {
+                e.stopPropagation();
+                profileMenu.classList.toggle("show");
+              });
+
+              document.addEventListener("click", (e) => {
+                if (!e.target.closest(".profile-dropdown")) {
+                  profileMenu.classList.remove("show");
+                }
+              });
+            }
+          }, 100);
+        });
+
+      // FOOTER
+
+      fetch("../inc/footer.html")
+        .then((r) => r.text())
+        .then(
+          (html) =>
+            (document.getElementById("footerContainer").innerHTML = html),
+        );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,775 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Blacklisted Applicants Management | MASCO Group</title>
+    <link rel="icon" href="../assets/img/masco_logo.png" />
+
+    <meta
+      name="description"
+      content="MASCO Group Blacklisted Applicants Management System. Manage applicant blacklist records, reasons, severity levels and applicant information."
+    />
+
+    <meta
+      name="keywords"
+      content="MASCO, MASCO Group, garments Bangladesh, knitting garments Bangladesh, textile industry Bangladesh, applicant blacklist management, recruitment management"
+    />
+
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="MASCO Group" />
+
+    <link rel="stylesheet" href="../assets/css/leftMenu.css" />
+    <link rel="stylesheet" href="../assets/css/topMenu.css" />
+    <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+  </head>
+
+  <body>
+    <div id="leftMenuContainer"></div>
+
+    <div class="main-layout">
+      <div id="topMenuContainer"></div>
+
+      <main class="page-content">
+        <!-- PAGE TITLE -->
+        <div class="content-card page-title-card">
+          <h2>Blacklisted Applicants Management</h2>
+          <p>Monitor, review and manage blacklisted applicant records.</p>
+        </div>
+
+        <!-- FILTER TOGGLE -->
+        <div class="bam-toolbar">
+          <button
+            type="button"
+            id="toggleFilter"
+            class="bam-filter-toggle-btn"
+            title="Show / Hide Filters"
+          >
+            ☰
+          </button>
+        </div>
+
+        <div class="bam-layout">
+          <!-- FILTER PANEL -->
+          <aside class="content-card bam-filter-card">
+            <div class="bam-filter-header">
+              <h3>Filters</h3>
+            </div>
+
+            <input
+              type="text"
+              id="globalSearch"
+              class="bam-search"
+              placeholder="Search ID / Name / NID"
+            />
+
+            <div class="bam-filter-group">
+              <h4>Department</h4>
+
+              <select id="departmentFilter">
+                <option value="">All Department</option>
+                <option>MIS</option>
+                <option>HR</option>
+                <option>Accounts</option>
+                <option>Production</option>
+              </select>
+            </div>
+
+            <div class="bam-filter-group">
+              <h4>Reason</h4>
+
+              <label>
+                <input
+                  type="checkbox"
+                  class="filter-reason"
+                  value="Fraud Activity"
+                />
+                Fraud Activity
+              </label>
+
+              <label>
+                <input type="checkbox" class="filter-reason" value="Fake CV" />
+                Fake CV
+              </label>
+
+              <label>
+                <input
+                  type="checkbox"
+                  class="filter-reason"
+                  value="Misconduct"
+                />
+                Misconduct
+              </label>
+            </div>
+
+            <div class="bam-filter-group">
+              <h4>Severity</h4>
+
+              <label>
+                <input type="checkbox" class="filter-severity" value="Low" />
+                Low
+              </label>
+
+              <label>
+                <input type="checkbox" class="filter-severity" value="Medium" />
+                Medium
+              </label>
+
+              <label>
+                <input type="checkbox" class="filter-severity" value="High" />
+                High
+              </label>
+            </div>
+
+            <div class="bam-filter-group">
+              <h4>Role</h4>
+
+              <select id="roleFilter">
+                <option value="">All Role</option>
+                <option>MIS Executive</option>
+                <option>HR Executive</option>
+                <option>Accounts Officer</option>
+                <option>Production Executive</option>
+                <option>Business Analyst</option>
+              </select>
+            </div>
+
+            <div class="bam-filter-group">
+              <h4>Gender</h4>
+
+              <label>
+                <input type="checkbox" class="filter-gender" value="Male" />
+                Male
+              </label>
+
+              <label>
+                <input type="checkbox" class="filter-gender" value="Female" />
+                Female
+              </label>
+            </div>
+
+            <button id="resetFilters" class="bam-reset-btn">
+              Reset Filters
+            </button>
+          </aside>
+
+          <!-- TABLE -->
+          <section class="content-card bam-table-card">
+            <div class="bam-responsive-table">
+              <table class="bam-table">
+                <thead>
+                  <tr>
+                    <th><input type="checkbox" id="selectAll" /></th>
+                    <th>SL</th>
+                    <th>Applicant ID</th>
+                    <th>Applicant Name</th>
+                    <th>Applicant NID</th>
+                    <th>Applied Role</th>
+                    <th>Gender</th>
+                    <th>Reason</th>
+                    <th>Severity</th>
+                    <th>Blacklisted Date</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+
+                <tbody id="blacklistBody">
+                  <tr
+                    data-id="APP1001"
+                    data-name="Rahim Ahmed"
+                    data-nid="1987654321001"
+                    data-role="MIS Executive"
+                    data-gender="Male"
+                    data-reason="Fraud Activity"
+                    data-severity="High"
+                    data-department="MIS"
+                  >
+                    <td><input class="rowCheck" type="checkbox" /></td>
+                    <td>1</td>
+                    <td>APP1001</td>
+                    <td>Rahim Ahmed</td>
+                    <td>1987654321001</td>
+                    <td>MIS Executive</td>
+                    <td>Male</td>
+                    <td>Fraud Activity</td>
+                    <td><span class="bam-severity high">High</span></td>
+                    <td class="systemDate"></td>
+                    <td>
+                      <div class="bam-action-group">
+                        <a
+                          href="2.1-candidates-cv-bank-details.html"
+                          class="bam-btn bam-view-btn"
+                          >View Details</a
+                        >
+                        <button class="bam-btn bam-unblacklist-btn">
+                          Unblacklist
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr
+                    data-id="APP1002"
+                    data-name="Nusrat Jahan"
+                    data-nid="1987654321002"
+                    data-role="HR Executive"
+                    data-gender="Female"
+                    data-reason="Fake CV"
+                    data-severity="Medium"
+                    data-department="HR"
+                  >
+                    <td><input class="rowCheck" type="checkbox" /></td>
+                    <td>2</td>
+                    <td>APP1002</td>
+                    <td>Nusrat Jahan</td>
+                    <td>1987654321002</td>
+                    <td>HR Executive</td>
+                    <td>Female</td>
+                    <td>Fake CV</td>
+                    <td><span class="bam-severity medium">Medium</span></td>
+                    <td class="systemDate"></td>
+                    <td>
+                      <div class="bam-action-group">
+                        <a
+                          href="2.1-candidates-cv-bank-details.html"
+                          class="bam-btn bam-view-btn"
+                          >View Details</a
+                        >
+                        <button class="bam-btn bam-unblacklist-btn">
+                          Unblacklist
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr
+                    data-id="APP1003"
+                    data-name="Hasib Khan"
+                    data-nid="1987654321003"
+                    data-role="Accounts Officer"
+                    data-gender="Male"
+                    data-reason="Misconduct"
+                    data-severity="Low"
+                    data-department="Accounts"
+                  >
+                    <td><input class="rowCheck" type="checkbox" /></td>
+                    <td>3</td>
+                    <td>APP1003</td>
+                    <td>Hasib Khan</td>
+                    <td>1987654321003</td>
+                    <td>Accounts Officer</td>
+                    <td>Male</td>
+                    <td>Misconduct</td>
+                    <td><span class="bam-severity low">Low</span></td>
+                    <td class="systemDate"></td>
+                    <td>
+                      <div class="bam-action-group">
+                        <a
+                          href="2.1-candidates-cv-bank-details.html"
+                          class="bam-btn bam-view-btn"
+                          >View Details</a
+                        >
+                        <button class="bam-btn bam-unblacklist-btn">
+                          Unblacklist
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr
+                    data-id="APP1004"
+                    data-name="Sharmin Akter"
+                    data-nid="1987654321004"
+                    data-role="Business Analyst"
+                    data-gender="Female"
+                    data-reason="Fraud Activity"
+                    data-severity="High"
+                    data-department="MIS"
+                  >
+                    <td><input class="rowCheck" type="checkbox" /></td>
+                    <td>4</td>
+                    <td>APP1004</td>
+                    <td>Sharmin Akter</td>
+                    <td>1987654321004</td>
+                    <td>Business Analyst</td>
+                    <td>Female</td>
+                    <td>Fraud Activity</td>
+                    <td><span class="bam-severity high">High</span></td>
+                    <td class="systemDate"></td>
+                    <td>
+                      <div class="bam-action-group">
+                        <a
+                          href="2.1-candidates-cv-bank-details.html"
+                          class="bam-btn bam-view-btn"
+                          >View Details</a
+                        >
+                        <button class="bam-btn bam-unblacklist-btn">
+                          Unblacklist
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr
+                    data-id="APP1005"
+                    data-name="Sabbir Ahmed"
+                    data-nid="1987654321005"
+                    data-role="Production Executive"
+                    data-gender="Male"
+                    data-reason="Fake CV"
+                    data-severity="Medium"
+                    data-department="Production"
+                  >
+                    <td><input class="rowCheck" type="checkbox" /></td>
+                    <td>5</td>
+                    <td>APP1005</td>
+                    <td>Sabbir Ahmed</td>
+                    <td>1987654321005</td>
+                    <td>Production Executive</td>
+                    <td>Male</td>
+                    <td>Fake CV</td>
+                    <td><span class="bam-severity medium">Medium</span></td>
+                    <td class="systemDate"></td>
+                    <td>
+                      <div class="bam-action-group">
+                        <a
+                          href="2.1-candidates-cv-bank-details.html"
+                          class="bam-btn bam-view-btn"
+                          >View Details</a
+                        >
+                        <button class="bam-btn bam-unblacklist-btn">
+                          Unblacklist
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr
+                    data-id="APP1006"
+                    data-name="Tania Sultana"
+                    data-nid="1987654321006"
+                    data-role="HR Executive"
+                    data-gender="Female"
+                    data-reason="Misconduct"
+                    data-severity="Low"
+                    data-department="HR"
+                  >
+                    <td><input class="rowCheck" type="checkbox" /></td>
+                    <td>6</td>
+                    <td>APP1006</td>
+                    <td>Tania Sultana</td>
+                    <td>1987654321006</td>
+                    <td>HR Executive</td>
+                    <td>Female</td>
+                    <td>Misconduct</td>
+                    <td><span class="bam-severity low">Low</span></td>
+                    <td class="systemDate"></td>
+                    <td>
+                      <div class="bam-action-group">
+                        <a
+                          href="2.1-candidates-cv-bank-details.html"
+                          class="bam-btn bam-view-btn"
+                          >View Details</a
+                        >
+                        <button class="bam-btn bam-unblacklist-btn">
+                          Unblacklist
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr
+                    data-id="APP1007"
+                    data-name="Imran Hossain"
+                    data-nid="1987654321007"
+                    data-role="MIS Executive"
+                    data-gender="Male"
+                    data-reason="Fraud Activity"
+                    data-severity="High"
+                    data-department="MIS"
+                  >
+                    <td><input class="rowCheck" type="checkbox" /></td>
+                    <td>7</td>
+                    <td>APP1007</td>
+                    <td>Imran Hossain</td>
+                    <td>1987654321007</td>
+                    <td>MIS Executive</td>
+                    <td>Male</td>
+                    <td>Fraud Activity</td>
+                    <td><span class="bam-severity high">High</span></td>
+                    <td class="systemDate"></td>
+                    <td>
+                      <div class="bam-action-group">
+                        <a
+                          href="2.1-candidates-cv-bank-details.html"
+                          class="bam-btn bam-view-btn"
+                          >View Details</a
+                        >
+                        <button class="bam-btn bam-unblacklist-btn">
+                          Unblacklist
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr
+                    data-id="APP1008"
+                    data-name="Mahbuba Rahman"
+                    data-nid="1987654321008"
+                    data-role="Business Analyst"
+                    data-gender="Female"
+                    data-reason="Fake CV"
+                    data-severity="Medium"
+                    data-department="MIS"
+                  >
+                    <td><input class="rowCheck" type="checkbox" /></td>
+                    <td>8</td>
+                    <td>APP1008</td>
+                    <td>Mahbuba Rahman</td>
+                    <td>1987654321008</td>
+                    <td>Business Analyst</td>
+                    <td>Female</td>
+                    <td>Fake CV</td>
+                    <td><span class="bam-severity medium">Medium</span></td>
+                    <td class="systemDate"></td>
+                    <td>
+                      <div class="bam-action-group">
+                        <a
+                          href="2.1-candidates-cv-bank-details.html"
+                          class="bam-btn bam-view-btn"
+                          >View Details</a
+                        >
+                        <button class="bam-btn bam-unblacklist-btn">
+                          Unblacklist
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr
+                    data-id="APP1009"
+                    data-name="Mehedi Hasan"
+                    data-nid="1987654321009"
+                    data-role="Accounts Officer"
+                    data-gender="Male"
+                    data-reason="Misconduct"
+                    data-severity="Low"
+                    data-department="Accounts"
+                  >
+                    <td><input class="rowCheck" type="checkbox" /></td>
+                    <td>9</td>
+                    <td>APP1009</td>
+                    <td>Mehedi Hasan</td>
+                    <td>1987654321009</td>
+                    <td>Accounts Officer</td>
+                    <td>Male</td>
+                    <td>Misconduct</td>
+                    <td><span class="bam-severity low">Low</span></td>
+                    <td class="systemDate"></td>
+                    <td>
+                      <div class="bam-action-group">
+                        <a
+                          href="2.1-candidates-cv-bank-details.html"
+                          class="bam-btn bam-view-btn"
+                          >View Details</a
+                        >
+                        <button class="bam-btn bam-unblacklist-btn">
+                          Unblacklist
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr
+                    data-id="APP1010"
+                    data-name="Fariha Islam"
+                    data-nid="1987654321010"
+                    data-role="HR Executive"
+                    data-gender="Female"
+                    data-reason="Fraud Activity"
+                    data-severity="High"
+                    data-department="HR"
+                  >
+                    <td><input class="rowCheck" type="checkbox" /></td>
+                    <td>10</td>
+                    <td>APP1010</td>
+                    <td>Fariha Islam</td>
+                    <td>1987654321010</td>
+                    <td>HR Executive</td>
+                    <td>Female</td>
+                    <td>Fraud Activity</td>
+                    <td><span class="bam-severity high">High</span></td>
+                    <td class="systemDate"></td>
+                    <td>
+                      <div class="bam-action-group">
+                        <a
+                          href="2.1-candidates-cv-bank-details.html"
+                          class="bam-btn bam-view-btn"
+                          >View Details</a
+                        >
+                        <button class="bam-btn bam-unblacklist-btn">
+                          Unblacklist
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <div id="footerContainer"></div>
+    </div>
+
+    <script>
+      const today = new Date();
+
+      const dateString = today.toLocaleDateString("en-GB", {
+        weekday: "long",
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+      });
+
+      document.querySelectorAll(".systemDate").forEach((el) => {
+        el.textContent = dateString;
+      });
+
+      document
+        .getElementById("selectAll")
+        .addEventListener("change", function () {
+          document.querySelectorAll(".rowCheck").forEach((c) => {
+            c.checked = this.checked;
+          });
+        });
+
+      const toggleBtn = document.getElementById("toggleFilter");
+      const filterCard = document.querySelector(".bam-filter-card");
+      const layout = document.querySelector(".bam-layout");
+
+      let hidden = false;
+
+      toggleBtn.addEventListener("click", () => {
+        hidden = !hidden;
+
+        if (hidden) {
+          filterCard.style.display = "none";
+          layout.classList.add("bam-filter-hidden");
+        } else {
+          filterCard.style.display = "";
+          layout.classList.remove("bam-filter-hidden");
+        }
+      });
+    </script>
+    <script>
+      const search = document.getElementById("globalSearch");
+
+      search.addEventListener("keyup", applyFilters);
+
+      document
+        .querySelectorAll(
+          ".filter-reason,.filter-severity,.filter-gender,#departmentFilter,#roleFilter",
+        )
+        .forEach((x) => {
+          x.addEventListener("change", applyFilters);
+        });
+
+      function applyFilters() {
+        const keyword = document
+          .getElementById("globalSearch")
+          .value.toLowerCase();
+
+        const department = document.getElementById("departmentFilter").value;
+
+        const role = document.getElementById("roleFilter").value;
+
+        const reasons = [
+          ...document.querySelectorAll(".filter-reason:checked"),
+        ].map((x) => x.value);
+
+        const severities = [
+          ...document.querySelectorAll(".filter-severity:checked"),
+        ].map((x) => x.value);
+
+        const genders = [
+          ...document.querySelectorAll(".filter-gender:checked"),
+        ].map((x) => x.value);
+
+        document.querySelectorAll("#blacklistBody tr").forEach((row) => {
+          const id = row.dataset.id?.toLowerCase() || "";
+
+          const name = row.dataset.name?.toLowerCase() || "";
+
+          const nid = row.dataset.nid?.toLowerCase() || "";
+
+          const rowDepartment = row.dataset.department || "";
+
+          const rowRole = row.dataset.role || "";
+
+          const rowGender = row.dataset.gender || "";
+
+          const rowReason = row.dataset.reason || "";
+
+          const rowSeverity = row.dataset.severity || "";
+
+          const searchMatch =
+            !keyword ||
+            id.includes(keyword) ||
+            name.includes(keyword) ||
+            nid.includes(keyword);
+
+          const deptMatch = !department || department === rowDepartment;
+
+          const roleMatch = !role || role === rowRole;
+
+          const genderMatch =
+            genders.length === 0 || genders.includes(rowGender);
+
+          const reasonMatch =
+            reasons.length === 0 || reasons.includes(rowReason);
+
+          const severityMatch =
+            severities.length === 0 || severities.includes(rowSeverity);
+
+          row.style.display =
+            searchMatch &&
+            deptMatch &&
+            roleMatch &&
+            genderMatch &&
+            reasonMatch &&
+            severityMatch
+              ? ""
+              : "none";
+        });
+      }
+
+      document.getElementById("resetFilters").addEventListener("click", () => {
+        document
+          .querySelectorAll(".filter-reason,.filter-severity,.filter-gender")
+          .forEach((x) => (x.checked = false));
+
+        document.getElementById("departmentFilter").value = "";
+        document.getElementById("roleFilter").value = "";
+        document.getElementById("globalSearch").value = "";
+
+        document.querySelectorAll("#blacklistBody tr").forEach((row) => {
+          row.style.display = "";
+        });
+      });
+    </script>
+    <script>
+      // LEFT MENU
+      fetch("../inc/leftMenu.html")
+        .then((r) => r.text())
+        .then((html) => {
+          document.getElementById("leftMenuContainer").innerHTML = html;
+        });
+
+      // TOP MENU
+      fetch("../inc/topMenu.html")
+        .then((r) => r.text())
+        .then((html) => {
+          document.getElementById("topMenuContainer").innerHTML = html;
+
+          setTimeout(() => {
+            const menuToggle = document.getElementById("menuToggle");
+            const sidebar = document.getElementById("sidebar");
+            const overlay = document.getElementById("sidebarOverlay");
+
+            if (menuToggle && sidebar) {
+              menuToggle.addEventListener("click", (e) => {
+                e.stopPropagation();
+                sidebar.classList.toggle("active");
+                overlay?.classList.toggle("active");
+              });
+            }
+
+            if (overlay) {
+              overlay.addEventListener("click", () => {
+                sidebar?.classList.remove("active");
+                overlay.classList.remove("active");
+              });
+            }
+
+            const profileToggle = document.getElementById("profileToggle");
+            const profileMenu = document.getElementById("profileMenu");
+
+            if (profileToggle && profileMenu) {
+              profileToggle.addEventListener("click", (e) => {
+                e.stopPropagation();
+                profileMenu.classList.toggle("show");
+              });
+
+              document.addEventListener("click", (e) => {
+                if (!e.target.closest(".profile-dropdown")) {
+                  profileMenu.classList.remove("show");
+                }
+              });
+            }
+          }, 100);
+        });
+
+      // FOOTER
+      fetch("../inc/footer.html")
+        .then((r) => r.text())
+        .then((html) => {
+          document.getElementById("footerContainer").innerHTML = html;
+        });
+
+      /* ==========================
+     UNBLACKLIST MODAL
+  ========================== */
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const modal = document.getElementById("unblacklistModal");
+        const yesBtn = document.getElementById("confirmYes");
+        const noBtn = document.getElementById("confirmNo");
+
+        document.addEventListener("click", (e) => {
+          const btn = e.target.closest(".bam-unblacklist-btn");
+
+          if (btn) {
+            e.preventDefault();
+            modal.classList.add("show");
+          }
+        });
+
+        // yesBtn?.addEventListener("click", () => {
+        //   modal.classList.remove("show");
+        //   alert("Candidate removed from blacklist.");
+        // });
+
+        yesBtn?.addEventListener("click", () => {
+          modal.classList.remove("show");
+        });
+
+        noBtn?.addEventListener("click", () => {
+          modal.classList.remove("show");
+        });
+
+        modal?.addEventListener("click", (e) => {
+          if (e.target === modal) {
+            modal.classList.remove("show");
+          }
+        });
+      });
+    </script>
+
+    <!-- UNBLACKLIST MODAL -->
+    <div class="custom-modal" id="unblacklistModal">
+      <div class="custom-modal-content">
+        <h3>Are you sure?</h3>
+        <p>This applicant will be removed from the blacklist.</p>
+
+        <div class="modal-actions">
+          <button id="confirmYes" class="modal-btn modal-yes">Yes</button>
+          <button id="confirmNo" class="modal-btn modal-no">No</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

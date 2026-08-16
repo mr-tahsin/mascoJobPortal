@@ -1,0 +1,666 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>
+      Job Vacancy List | MASCO Group Recruitment Management Bangladesh
+    </title>
+
+    <meta
+      name="description"
+      content="Browse and manage active, draft, and closed job vacancies of MASCO Group. Leading garments and knitting recruitment management platform in Bangladesh."
+    />
+
+    <meta
+      name="keywords"
+      content="MASCO Group jobs, garments jobs Bangladesh, knitting jobs Bangladesh, recruitment software Bangladesh, HR portal Bangladesh, textile jobs Bangladesh"
+    />
+
+    <meta name="author" content="MASCO Group" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="icon" href="../assets/img/masco_logo.png" />
+    <link rel="stylesheet" href="../assets/css/leftMenu.css" />
+    <link rel="stylesheet" href="../assets/css/topMenu.css" />
+    <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/1.1-job-vacancy-list.css" />
+  </head>
+
+  <body>
+    <div id="leftMenuContainer"></div>
+
+    <div class="main-layout">
+      <div id="topMenuContainer"></div>
+
+      <main class="page-content">
+        <div class="content-card page-title-card">
+          <div>
+            <h2>Job Vacancy List</h2>
+            <p>
+              Manage, edit and review all recruitment vacancies across MASCO
+              Group.
+            </p>
+          </div>
+        </div>
+
+        <div class="dashboard-cards">
+          <div class="dashboard-card">
+            <h2>45</h2>
+            <p>Published Vacancies</p>
+          </div>
+
+          <div class="dashboard-card">
+            <h2>12</h2>
+            <p>Unpublished Vacancies</p>
+          </div>
+
+          <div class="dashboard-card">
+            <h2>08</h2>
+            <p>Draft Vacancies</p>
+          </div>
+
+          <div class="dashboard-card">
+            <h2>2,485</h2>
+            <p>Total Applicants</p>
+          </div>
+        </div>
+
+        <div class="vacancy-header-actions">
+          <a
+            href="../pages/1-job-vacancy-management.html"
+            class="create-job-btn"
+          >
+            + Create Vacancy
+          </a>
+        </div>
+
+        <div class="content-card">
+          <div class="vacancy-toolbar">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search by Requisition ID, Job Title, Department..."
+              class="search-input"
+            />
+
+            <select class="filter-select" id="statusFilter">
+              <option value="all">All Status</option>
+              <option value="Published">Published</option>
+              <option value="Draft">Draft</option>
+              <option value="Closed">Closed</option>
+            </select>
+
+            <select class="filter-select" id="departmentFilter">
+              <option value="all">All Departments</option>
+              <option value="IT">IT</option>
+              <option value="HR & Admin">HR & Admin</option>
+              <option value="Merchandising">Merchandising</option>
+              <option value="Production">Production</option>
+              <option value="Finance">Finance</option>
+            </select>
+            <button type="button" id="resetFilters" class="reset-filter-btn">
+              Reset Filters
+            </button>
+          </div>
+
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Requisition ID</th>
+                  <th>Job Title</th>
+                  <th>Department</th>
+                  <th>Posted Date</th>
+                  <th>Day</th>
+                  <th>Status</th>
+                  <th>Applicants</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="vacancyTableBody">
+                <!-- PAGE 1 -->
+
+                <tr data-page="1" data-status="Published" data-department="IT">
+                  <td>1</td>
+                  <td>REQ-2026-001</td>
+                  <td>Software Engineer</td>
+                  <td>IT</td>
+                  <td>10 Jun 2026</td>
+                  <td>Wednesday</td>
+                  <td><span class="status published">Published</span></td>
+                  <td>142</td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="action-btn edit-btn">✏️</button>
+                      <button class="action-btn delete-btn">🗑️</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr
+                  data-page="1"
+                  data-status="Draft"
+                  data-department="HR & Admin"
+                >
+                  <td>2</td>
+                  <td>REQ-2026-002</td>
+                  <td>HR Executive</td>
+                  <td>HR & Admin</td>
+                  <td>09 Jun 2026</td>
+                  <td>Tuesday</td>
+                  <td><span class="status draft">Draft</span></td>
+                  <td>65</td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="action-btn edit-btn">✏️</button>
+                      <button class="action-btn delete-btn">🗑️</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr
+                  data-page="1"
+                  data-status="Closed"
+                  data-department="Production"
+                >
+                  <td>3</td>
+                  <td>REQ-2026-003</td>
+                  <td>Production Officer</td>
+                  <td>Production</td>
+                  <td>08 Jun 2026</td>
+                  <td>Monday</td>
+                  <td><span class="status closed">Closed</span></td>
+                  <td>98</td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="action-btn edit-btn">✏️</button>
+                      <button class="action-btn delete-btn">🗑️</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr
+                  data-page="1"
+                  data-status="Published"
+                  data-department="Merchandising"
+                >
+                  <td>4</td>
+                  <td>REQ-2026-004</td>
+                  <td>Senior Merchandiser</td>
+                  <td>Merchandising</td>
+                  <td>07 Jun 2026</td>
+                  <td>Sunday</td>
+                  <td><span class="status published">Published</span></td>
+                  <td>187</td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="action-btn edit-btn">✏️</button>
+                      <button class="action-btn delete-btn">🗑️</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr
+                  data-page="1"
+                  data-status="Published"
+                  data-department="Finance"
+                >
+                  <td>5</td>
+                  <td>REQ-2026-005</td>
+                  <td>Accounts Executive</td>
+                  <td>Finance</td>
+                  <td>06 Jun 2026</td>
+                  <td>Saturday</td>
+                  <td><span class="status published">Published</span></td>
+                  <td>43</td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="action-btn edit-btn">✏️</button>
+                      <button class="action-btn delete-btn">🗑️</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr data-page="1" data-status="Draft" data-department="IT">
+                  <td>6</td>
+                  <td>REQ-2026-006</td>
+                  <td>System Analyst</td>
+                  <td>IT</td>
+                  <td>05 Jun 2026</td>
+                  <td>Friday</td>
+                  <td><span class="status draft">Draft</span></td>
+                  <td>52</td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="action-btn edit-btn">✏️</button>
+                      <button class="action-btn delete-btn">🗑️</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- PAGE 2 -->
+
+                <tr
+                  data-page="2"
+                  data-status="Published"
+                  data-department="Production"
+                >
+                  <td>7</td>
+                  <td>REQ-2026-007</td>
+                  <td>Knitting Manager</td>
+                  <td>Production</td>
+                  <td>04 Jun 2026</td>
+                  <td>Thursday</td>
+                  <td><span class="status published">Published</span></td>
+                  <td>203</td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="action-btn edit-btn">✏️</button>
+                      <button class="action-btn delete-btn">🗑️</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr
+                  data-page="2"
+                  data-status="Closed"
+                  data-department="Finance"
+                >
+                  <td>8</td>
+                  <td>REQ-2026-008</td>
+                  <td>Finance Manager</td>
+                  <td>Finance</td>
+                  <td>03 Jun 2026</td>
+                  <td>Wednesday</td>
+                  <td><span class="status closed">Closed</span></td>
+                  <td>91</td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="action-btn edit-btn">✏️</button>
+                      <button class="action-btn delete-btn">🗑️</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr data-page="2" data-status="Published" data-department="IT">
+                  <td>9</td>
+                  <td>REQ-2026-009</td>
+                  <td>Database Administrator</td>
+                  <td>IT</td>
+                  <td>02 Jun 2026</td>
+                  <td>Tuesday</td>
+                  <td><span class="status published">Published</span></td>
+                  <td>121</td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="action-btn edit-btn">✏️</button>
+                      <button class="action-btn delete-btn">🗑️</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr
+                  data-page="2"
+                  data-status="Draft"
+                  data-department="HR & Admin"
+                >
+                  <td>10</td>
+                  <td>REQ-2026-010</td>
+                  <td>HR Officer</td>
+                  <td>HR & Admin</td>
+                  <td>01 Jun 2026</td>
+                  <td>Monday</td>
+                  <td><span class="status draft">Draft</span></td>
+                  <td>34</td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="action-btn edit-btn">✏️</button>
+                      <button class="action-btn delete-btn">🗑️</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr
+                  data-page="2"
+                  data-status="Published"
+                  data-department="Merchandising"
+                >
+                  <td>11</td>
+                  <td>REQ-2026-011</td>
+                  <td>Assistant Merchandiser</td>
+                  <td>Merchandising</td>
+                  <td>31 May 2026</td>
+                  <td>Sunday</td>
+                  <td><span class="status published">Published</span></td>
+                  <td>111</td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="action-btn edit-btn">✏️</button>
+                      <button class="action-btn delete-btn">🗑️</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr
+                  data-page="2"
+                  data-status="Closed"
+                  data-department="Production"
+                >
+                  <td>12</td>
+                  <td>REQ-2026-012</td>
+                  <td>Production Manager</td>
+                  <td>Production</td>
+                  <td>30 May 2026</td>
+                  <td>Saturday</td>
+                  <td><span class="status closed">Closed</span></td>
+                  <td>77</td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="action-btn edit-btn">✏️</button>
+                      <button class="action-btn delete-btn">🗑️</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- PAGE 3 -->
+
+                <tr data-page="3" data-status="Published" data-department="IT">
+                  <td>13</td>
+                  <td>REQ-2026-013</td>
+                  <td>Network Engineer</td>
+                  <td>IT</td>
+                  <td>29 May 2026</td>
+                  <td>Friday</td>
+                  <td><span class="status published">Published</span></td>
+                  <td>88</td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="action-btn edit-btn">✏️</button>
+                      <button class="action-btn delete-btn">🗑️</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr data-page="3" data-status="Draft" data-department="Finance">
+                  <td>14</td>
+                  <td>REQ-2026-014</td>
+                  <td>Cost Accountant</td>
+                  <td>Finance</td>
+                  <td>28 May 2026</td>
+                  <td>Thursday</td>
+                  <td><span class="status draft">Draft</span></td>
+                  <td>44</td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="action-btn edit-btn">✏️</button>
+                      <button class="action-btn delete-btn">🗑️</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr
+                  data-page="3"
+                  data-status="Published"
+                  data-department="Production"
+                >
+                  <td>15</td>
+                  <td>REQ-2026-015</td>
+                  <td>Quality Inspector</td>
+                  <td>Production</td>
+                  <td>27 May 2026</td>
+                  <td>Wednesday</td>
+                  <td><span class="status published">Published</span></td>
+                  <td>135</td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="action-btn edit-btn">✏️</button>
+                      <button class="action-btn delete-btn">🗑️</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr
+                  data-page="3"
+                  data-status="Closed"
+                  data-department="HR & Admin"
+                >
+                  <td>16</td>
+                  <td>REQ-2026-016</td>
+                  <td>Training Officer</td>
+                  <td>HR & Admin</td>
+                  <td>26 May 2026</td>
+                  <td>Tuesday</td>
+                  <td><span class="status closed">Closed</span></td>
+                  <td>63</td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="action-btn edit-btn">✏️</button>
+                      <button class="action-btn delete-btn">🗑️</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr
+                  data-page="3"
+                  data-status="Published"
+                  data-department="Merchandising"
+                >
+                  <td>17</td>
+                  <td>REQ-2026-017</td>
+                  <td>Merchandising Executive</td>
+                  <td>Merchandising</td>
+                  <td>25 May 2026</td>
+                  <td>Monday</td>
+                  <td><span class="status published">Published</span></td>
+                  <td>156</td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="action-btn edit-btn">✏️</button>
+                      <button class="action-btn delete-btn">🗑️</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr
+                  data-page="3"
+                  data-status="Draft"
+                  data-department="Production"
+                >
+                  <td>18</td>
+                  <td>REQ-2026-018</td>
+                  <td>Production Supervisor</td>
+                  <td>Production</td>
+                  <td>24 May 2026</td>
+                  <td>Sunday</td>
+                  <td><span class="status draft">Draft</span></td>
+                  <td>74</td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="action-btn edit-btn">✏️</button>
+                      <button class="action-btn delete-btn">🗑️</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="pagination-wrapper">
+            <button class="page-btn active" data-page="1">1</button>
+            <button class="page-btn" data-page="2">2</button>
+            <button class="page-btn" data-page="3">3</button>
+          </div>
+        </div>
+      </main>
+
+      <div id="footerContainer"></div>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal-overlay" id="actionModal">
+      <div class="modal-box">
+        <h3 id="modalTitle">Confirm Action</h3>
+        <p id="modalMessage">Are you sure you want to continue?</p>
+        <div class="modal-actions">
+          <button class="btn-no" id="closeModal">No</button>
+          <button class="btn-yes" id="confirmAction">Yes</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      fetch("../inc/leftMenu.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("leftMenuContainer").innerHTML = html;
+        });
+
+      fetch("../inc/topMenu.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("topMenuContainer").innerHTML = html;
+
+          setTimeout(() => {
+            const menuToggle = document.getElementById("menuToggle");
+            const sidebar = document.getElementById("sidebar");
+            const overlay = document.getElementById("sidebarOverlay");
+
+            if (menuToggle && sidebar) {
+              menuToggle.addEventListener("click", () => {
+                sidebar.classList.toggle("active");
+                overlay?.classList.toggle("active");
+              });
+            }
+
+            overlay?.addEventListener("click", () => {
+              sidebar?.classList.remove("active");
+              overlay?.classList.remove("active");
+            });
+
+            const profileToggle = document.getElementById("profileToggle");
+            const profileMenu = document.getElementById("profileMenu");
+
+            profileToggle?.addEventListener("click", (e) => {
+              e.stopPropagation();
+              profileMenu?.classList.toggle("show");
+            });
+
+            document
+              .getElementById("resetFilters")
+              .addEventListener("click", function () {
+                document.getElementById("searchInput").value = "";
+                document.getElementById("statusFilter").value = "all";
+                document.getElementById("departmentFilter").value = "all";
+
+                currentPage = 1;
+
+                document.querySelectorAll(".page-btn").forEach((btn) => {
+                  btn.classList.remove("active");
+                });
+
+                document
+                  .querySelector('.page-btn[data-page="1"]')
+                  .classList.add("active");
+
+                filterTable();
+              });
+            document.addEventListener("click", (e) => {
+              if (!e.target.closest(".profile-dropdown")) {
+                profileMenu?.classList.remove("show");
+              }
+            });
+          }, 100);
+        });
+
+      fetch("../inc/footer.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("footerContainer").innerHTML = html;
+        });
+
+      const modal = document.getElementById("actionModal");
+      const modalTitle = document.getElementById("modalTitle");
+      const modalMessage = document.getElementById("modalMessage");
+
+      document.addEventListener("click", function (e) {
+        if (e.target.closest(".delete-btn")) {
+          modal.classList.add("show");
+          modalTitle.textContent = "Delete Vacancy";
+          modalMessage.textContent =
+            "Are you sure you want to delete this vacancy?";
+        }
+
+        if (e.target.closest(".edit-btn")) {
+          modal.classList.add("show");
+          modalTitle.textContent = "Edit Vacancy";
+          modalMessage.textContent = "Do you want to edit this vacancy?";
+        }
+      });
+
+      document.getElementById("closeModal").addEventListener("click", () => {
+        modal.classList.remove("show");
+      });
+
+      document.getElementById("confirmAction").addEventListener("click", () => {
+        modal.classList.remove("show");
+      });
+
+      modal.addEventListener("click", function (e) {
+        if (e.target === modal) {
+          modal.classList.remove("show");
+        }
+      });
+
+      let currentPage = 1;
+
+      function filterTable() {
+        const search = document
+          .getElementById("searchInput")
+          .value.toLowerCase();
+        const status = document.getElementById("statusFilter").value;
+        const department = document.getElementById("departmentFilter").value;
+
+        document.querySelectorAll("#vacancyTableBody tr").forEach((row) => {
+          const text = row.innerText.toLowerCase();
+          const searchMatch = text.includes(search);
+          const statusMatch = status === "all" || row.dataset.status === status;
+          const departmentMatch =
+            department === "all" || row.dataset.department === department;
+          const pageMatch = parseInt(row.dataset.page) === currentPage;
+
+          row.style.display =
+            searchMatch && statusMatch && departmentMatch && pageMatch
+              ? ""
+              : "none";
+        });
+      }
+
+      document
+        .getElementById("searchInput")
+        .addEventListener("keyup", filterTable);
+      document
+        .getElementById("statusFilter")
+        .addEventListener("change", filterTable);
+      document
+        .getElementById("departmentFilter")
+        .addEventListener("change", filterTable);
+
+      document.querySelectorAll(".page-btn").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          document
+            .querySelectorAll(".page-btn")
+            .forEach((b) => b.classList.remove("active"));
+          this.classList.add("active");
+          currentPage = parseInt(this.dataset.page);
+          filterTable();
+        });
+      });
+
+      filterTable();
+    </script>
+  </body>
+</html>

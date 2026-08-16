@@ -1,0 +1,1123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Job Vacancy Management | MASCO Job Portal</title>
+
+    <meta
+      name="description"
+      content="Manage job vacancies at MASCO Job Portal. Create, publish, and track job postings for garment and knitting industry recruitment in Bangladesh."
+    />
+
+    <meta
+      name="keywords"
+      content="MASCO, job vacancy Bangladesh, garment jobs Bangladesh, knitting jobs Bangladesh, HR portal, recruitment system"
+    />
+
+    <meta name="author" content="MASCO Group" />
+
+    <link rel="icon" href="../assets/img/masco_logo.png" />
+
+    <link rel="stylesheet" href="../assets/css/leftMenu.css" />
+    <link rel="stylesheet" href="../assets/css/topMenu.css" />
+    <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+  </head>
+
+  <body>
+    <div id="leftMenuContainer"></div>
+
+    <div class="main-layout">
+      <div id="topMenuContainer"></div>
+
+      <main class="page-content">
+        <!-- PAGE TITLE -->
+        <div class="content-card page-title-card">
+          <h2>Job Vacancy Management</h2>
+          <p>Manage and create job vacancies for MASCO recruitment system</p>
+        </div>
+
+        <!-- TOP STATS -->
+        <div class="dashboard-cards">
+          <a href="1.1-job-vacancy-list.html" style="text-decoration: none">
+            <div class="dashboard-card">
+              <h2>45</h2>
+              <p>Published Vacancies</p>
+            </div>
+          </a>
+
+          <a href="1.1-job-vacancy-list.html" style="text-decoration: none">
+            <div class="dashboard-card">
+              <h2>12</h2>
+              <p>Unpublished Vacancies</p>
+            </div>
+          </a>
+
+          <a href="1.1-job-vacancy-list.html" style="text-decoration: none">
+            <div class="dashboard-card">
+              <h2>08</h2>
+              <p>Draft Vacancies</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- FORM CARD -->
+        <div class="content-card">
+          <h3>Create Job Vacancy</h3>
+
+          <!-- TABS -->
+          <div class="job-tabs">
+            <button type="button" class="tab-btn active" data-step="1">
+              Basic Info
+            </button>
+
+            <button type="button" class="tab-btn" data-step="3">
+              Eligibility
+            </button>
+
+            <button type="button" class="tab-btn" data-step="4">
+              Job Description
+            </button>
+
+            <button type="button" class="tab-btn" data-step="5">Preview</button>
+          </div>
+
+          <form id="jobForm">
+            <!-- =====================================================
+                 STEP 1 : BASIC INFORMATION
+            ====================================================== -->
+
+            <div class="tab-content active" id="step1">
+              <div class="form-section-title">Basic Information</div>
+
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>
+                    Requisition ID
+                    <sup style="color: red; font-weight: bolder">*</sup>
+                  </label>
+
+                  <input type="text" placeholder="REQ-2026-001" />
+                </div>
+
+                <div class="form-group">
+                  <label>
+                    Job Title
+                    <sup style="color: red; font-weight: bolder">*</sup>
+                  </label>
+
+                  <input type="text" value="Software Engineer" />
+                </div>
+
+                <div class="form-group">
+                  <label> Job Level </label>
+
+                  <select>
+                    <option selected>Entry Level</option>
+                    <option>Mid Level</option>
+                    <option>Senior Level</option>
+                    <option>Top Management</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label>
+                    Employment Type
+                    <sup style="color: red; font-weight: bolder">*</sup>
+                  </label>
+
+                  <select>
+                    <option selected>Full Time</option>
+                    <option>Part Time</option>
+                    <option>Contract</option>
+                    <option>Internship</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label>
+                    Number of Vacancies
+                    <sup style="color: red; font-weight: bolder">*</sup>
+                  </label>
+
+                  <input type="number" value="3" />
+                </div>
+
+                <div class="form-group">
+                  <label>
+                    Application Deadline
+                    <sup style="color: red; font-weight: bolder">*</sup>
+                  </label>
+
+                  <input type="date" id="applicationDeadline" />
+                </div>
+
+                <div class="form-group">
+                  <label>
+                    Expected Joining Date
+                    <sup style="color: red; font-weight: bolder">*</sup>
+                  </label>
+
+                  <input type="date" value="2026-09-01" />
+                </div>
+              </div>
+
+              <div class="form-section-title" style="margin-top: 50px">
+                Organizational Information
+              </div>
+
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>
+                    Unit
+                    <sup style="color: red; font-weight: bolder">*</sup>
+                  </label>
+
+                  <select>
+                    <option selected>Head Office</option>
+                    <option>Concept Knitting Ltd.</option>
+                    <option>MASCO Cottons Ltd.</option>
+                    <option>Shanta Expressions Ltd.</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label>
+                    Department
+                    <sup style="color: red; font-weight: bolder">*</sup>
+                  </label>
+
+                  <select>
+                    <option>Production</option>
+                    <option>HR & Admin</option>
+                    <option selected>Information Technology</option>
+                    <option>Finance & Accounts</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label>
+                    Section
+                    <sup style="color: red; font-weight: bolder">*</sup>
+                  </label>
+
+                  <input type="text" value="Software Development" />
+                </div>
+
+                <div class="form-group">
+                  <label>
+                    Location
+                    <sup style="color: red; font-weight: bolder">*</sup>
+                  </label>
+
+                  <input type="text" value="Dhaka, Bangladesh" />
+                </div>
+
+                <div class="form-group">
+                  <label> Reporting To </label>
+
+                  <input type="text" value="Manager - IT" />
+                </div>
+
+                <div class="form-group">
+                  <label> Workplace Type </label>
+
+                  <select>
+                    <option selected>On Site</option>
+                    <option>Hybrid</option>
+                    <option>Remote</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-navigation">
+                <div></div>
+
+                <button type="button" class="btn-next" data-next="3">
+                  Save & Next
+                </button>
+              </div>
+            </div>
+
+            <!-- =====================================================
+                 STEP 3 : ELIGIBILITY
+            ====================================================== -->
+
+            <div class="tab-content" id="step3">
+              <div class="form-section-title">Compensation & Eligibility</div>
+
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>
+                    Salary Range
+                    <sup style="color: red; font-weight: bolder">*</sup>
+                  </label>
+
+                  <div class="range-inputs">
+                    <input type="number" placeholder="Minimum" min="0" />
+
+                    <span class="range-separator">-</span>
+
+                    <input type="number" placeholder="Maximum" min="0" />
+
+                    <span class="range-title"> BDT </span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>
+                    Experience Required
+                    <sup style="color: red; font-weight: bolder">*</sup>
+                  </label>
+
+                  <div class="range-inputs">
+                    <input type="number" placeholder="Minimum" min="0" />
+
+                    <span class="range-separator">-</span>
+
+                    <input type="number" placeholder="Maximum" min="0" />
+
+                    <span class="range-title"> Years </span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>
+                    Minimum Education
+                    <sup style="color: red; font-weight: bolder">*</sup>
+                  </label>
+
+                  <input
+                    type="text"
+                    value="B.Sc. in CSE / Software Engineering"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label>
+                    Age Limit
+                    <sup style="color: red; font-weight: bolder">*</sup>
+                  </label>
+
+                  <div class="range-inputs">
+                    <input type="number" placeholder="Minimum" min="0" />
+
+                    <span class="range-separator">-</span>
+
+                    <input type="number" placeholder="Maximum" min="0" />
+
+                    <span class="range-title"> Years </span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label> Gender Preference </label>
+
+                  <select>
+                    <option selected>Any</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label> English Proficiency </label>
+
+                  <select>
+                    <option>Basic</option>
+                    <option selected>Intermediate</option>
+                    <option>Advanced</option>
+                  </select>
+                </div>
+
+                <!-- REQUIRED SKILLS -->
+
+                <div class="form-group full-width">
+                  <label>
+                    Required Skills
+                    <sup style="color: red; font-weight: bolder">*</sup>
+                  </label>
+
+                  <div class="skills-tag-input" id="skillsTagInput">
+                    <input
+                      type="text"
+                      id="skillInput"
+                      placeholder="Type a skill and press comma..."
+                      autocomplete="off"
+                    />
+                  </div>
+
+                  <input
+                    type="hidden"
+                    id="requiredSkills"
+                    name="requiredSkills"
+                  />
+                </div>
+
+                <!-- BENEFITS -->
+
+                <div class="form-group full-width">
+                  <label>
+                    Additional Benefits
+                    <sup style="color: red; font-weight: bolder">*</sup>
+                  </label>
+
+                  <textarea rows="4">
+Provident Fund, Festival Bonus, Medical Insurance, Mobile Allowance, Annual Performance Bonus</textarea
+                  >
+                </div>
+              </div>
+
+              <div class="form-navigation">
+                <button type="button" class="btn-prev" data-prev="1">
+                  Previous
+                </button>
+
+                <button type="button" class="btn-next" data-next="4">
+                  Save & Next
+                </button>
+              </div>
+            </div>
+
+            <!-- =====================================================
+                 STEP 4 : JOB DESCRIPTION
+            ====================================================== -->
+
+            <div class="tab-content" id="step4">
+              <div class="form-section-title">
+                Job Description & Publication
+              </div>
+
+              <div class="form-grid">
+                <div class="form-group full-width">
+                  <label>
+                    Job Summary
+                    <sup style="color: red; font-weight: bolder">*</sup>
+                  </label>
+
+                  <textarea rows="4">
+We are looking for a skilled Software Engineer to develop and maintain enterprise web applications, automate business processes, and support digital transformation initiatives across the organization.</textarea
+                  >
+                </div>
+
+                <div class="form-group full-width">
+                  <label>
+                    Key Responsibilities
+                    <sup style="color: red; font-weight: bolder">*</sup>
+                  </label>
+
+                  <textarea rows="6">
+• Develop and maintain web applications
+• Design and optimize SQL databases
+• Collaborate with business stakeholders
+• Troubleshoot and resolve system issues
+• Prepare technical documentation
+• Participate in system enhancement projects</textarea
+                  >
+                </div>
+
+                <div class="form-group full-width">
+                  <label>
+                    Job Requirements
+                    <sup style="color: red; font-weight: bolder">*</sup>
+                  </label>
+
+                  <textarea rows="6">
+• Bachelor's degree in CSE, Software Engineering, or related field
+• Minimum 2 years of software development experience
+• Strong knowledge of JavaScript, HTML, CSS
+• Experience with SQL Server
+• Familiarity with REST APIs
+• Good communication and teamwork skills</textarea
+                  >
+                </div>
+              </div>
+
+              <div class="form-navigation">
+                <button type="button" class="btn-prev" data-prev="3">
+                  Previous
+                </button>
+                <button type="button" class="btn-next" data-next="5">
+                  Save & Next
+                </button>
+              </div>
+            </div>
+
+            <!-- =====================================================
+     STEP 3 : PREVIEW
+====================================================== -->
+
+            <div class="tab-content" id="step5">
+              <!-- PREVIEW HEADER -->
+
+              <div class="preview-main-header">
+                <div>
+                  <div class="preview-main-title">Job Vacancy Preview</div>
+
+                  <div class="preview-main-subtitle">
+                    Review all vacancy information before saving
+                  </div>
+                </div>
+              </div>
+
+              <!-- =====================================================
+       BASIC INFORMATION
+  ====================================================== -->
+
+              <div class="preview-card">
+                <div class="preview-card-header">
+                  <div>
+                    <div class="preview-card-title">Basic Information</div>
+
+                    <div class="preview-card-subtitle">
+                      Vacancy and organizational details
+                    </div>
+                  </div>
+
+                  <button type="button" class="preview-edit-btn" data-edit="1">
+                    ✎ Edit
+                  </button>
+                </div>
+
+                <div class="preview-grid" id="basicInfoPreview"></div>
+              </div>
+
+              <!-- =====================================================
+       ELIGIBILITY
+  ====================================================== -->
+
+              <div class="preview-card">
+                <div class="preview-card-header">
+                  <div>
+                    <div class="preview-card-title">
+                      Compensation & Eligibility
+                    </div>
+
+                    <div class="preview-card-subtitle">
+                      Salary, experience, education and candidate requirements
+                    </div>
+                  </div>
+
+                  <button type="button" class="preview-edit-btn" data-edit="3">
+                    ✎ Edit
+                  </button>
+                </div>
+
+                <div class="preview-grid" id="eligibilityPreview"></div>
+              </div>
+
+              <!-- =====================================================
+       JOB DESCRIPTION
+  ====================================================== -->
+
+              <div class="preview-card">
+                <div class="preview-card-header">
+                  <div>
+                    <div class="preview-card-title">Job Description</div>
+
+                    <div class="preview-card-subtitle">
+                      Responsibilities, requirements and job summary
+                    </div>
+                  </div>
+
+                  <button type="button" class="preview-edit-btn" data-edit="4">
+                    ✎ Edit
+                  </button>
+                </div>
+
+                <div class="preview-grid" id="jobDescriptionPreview"></div>
+              </div>
+
+              <!-- =====================================================
+       PUBLICATION
+  ====================================================== -->
+
+              <!-- =====================================================
+     JOB STATUS & PUBLISH DATE
+====================================================== -->
+
+              <div class="preview-status-row">
+                <div class="form-group">
+                  <label>
+                    Job Status
+                    <sup style="color: red; font-weight: bolder">*</sup>
+                  </label>
+
+                  <select id="jobStatus">
+                    <option selected>Select</option>
+                    <option>Publish</option>
+                    <option>Unpublish</option>
+                    <option>Draft</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label style="margin-top: 20px"> Publish Date </label>
+
+                  <input type="date" id="publishDate" />
+                </div>
+              </div>
+
+              <!-- =====================================================
+     ACTIONS
+====================================================== -->
+
+              <div class="preview-actions">
+                <button type="button" class="preview-back-btn" data-prev="4">
+                  Previous
+                </button>
+
+                <button
+                  type="button"
+                  class="preview-save-btn"
+                  id="finalSaveBtn"
+                >
+                  Save
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </main>
+
+      <div id="footerContainer"></div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+      //  TODAY'S DATE
+
+      function getTodayDate() {
+        const today = new Date();
+
+        const year = today.getFullYear();
+
+        const month = String(today.getMonth() + 1).padStart(2, "0");
+
+        const day = String(today.getDate()).padStart(2, "0");
+
+        return `${year}-${month}-${day}`;
+      }
+
+      const today = getTodayDate();
+
+      const publishDate = document.getElementById("publishDate");
+
+      const applicationDeadline = document.getElementById(
+        "applicationDeadline",
+      );
+
+      if (publishDate) {
+        publishDate.value = today;
+      }
+
+      if (applicationDeadline) {
+        applicationDeadline.value = today;
+      }
+
+      /* =========================================================
+   TAB NAVIGATION
+========================================================= */
+
+      const tabs = document.querySelectorAll(".tab-btn");
+
+      const contents = document.querySelectorAll(".tab-content");
+
+      function showStep(step) {
+        tabs.forEach((tab) => {
+          tab.classList.remove("active");
+
+          if (tab.dataset.step === step.toString()) {
+            tab.classList.add("active");
+          }
+        });
+
+        contents.forEach((content) => {
+          content.classList.remove("active");
+        });
+
+        const target = document.getElementById("step" + step);
+
+        if (target) {
+          target.classList.add("active");
+        }
+
+        /*
+    Whenever Preview is opened,
+    refresh all preview information.
+  */
+
+        if (step === 5) {
+          renderPreview();
+        }
+      }
+
+      /* =========================================================
+   TAB BUTTON CLICK
+========================================================= */
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          showStep(tab.dataset.step);
+        });
+      });
+
+      /* =========================================================
+   NEXT BUTTON
+========================================================= */
+
+      document.querySelectorAll(".btn-next").forEach((button) => {
+        button.addEventListener("click", () => {
+          showStep(button.dataset.next);
+        });
+      });
+
+      /* =========================================================
+   PREVIOUS BUTTON
+========================================================= */
+
+      document.querySelectorAll(".btn-prev").forEach((button) => {
+        button.addEventListener("click", () => {
+          showStep(button.dataset.prev);
+        });
+      });
+
+      /* =========================================================
+   SKILLS CAPSULE
+========================================================= */
+
+      const skillsTagInput = document.getElementById("skillsTagInput");
+
+      const skillInput = document.getElementById("skillInput");
+
+      const requiredSkills = document.getElementById("requiredSkills");
+
+      let skills = [];
+
+      function addSkill(skill) {
+        skill = skill.trim();
+
+        if (!skill || skills.includes(skill)) {
+          return;
+        }
+
+        skills.push(skill);
+
+        const tag = document.createElement("span");
+
+        tag.className = "skills-tag";
+
+        tag.innerHTML = `
+    <span>${escapeHtml(skill)}</span>
+
+    <button
+      type="button"
+      class="skills-tag-remove"
+      aria-label="Remove ${escapeHtml(skill)}"
+    >
+      ×
+    </button>
+  `;
+
+        tag
+          .querySelector(".skills-tag-remove")
+          .addEventListener("click", () => {
+            skills = skills.filter((item) => item !== skill);
+
+            tag.remove();
+
+            updateSkillsValue();
+          });
+
+        skillsTagInput.insertBefore(tag, skillInput);
+
+        updateSkillsValue();
+      }
+
+      function updateSkillsValue() {
+        requiredSkills.value = skills.join(",");
+      }
+
+      /* =========================================================
+   SKILL INPUT EVENTS
+========================================================= */
+
+      skillInput.addEventListener("keydown", function (event) {
+        /*
+      Comma creates capsule
+    */
+
+        if (event.key === ",") {
+          event.preventDefault();
+
+          addSkill(this.value);
+
+          this.value = "";
+        }
+
+        /*
+      Enter creates capsule
+    */
+
+        if (event.key === "Enter") {
+          event.preventDefault();
+
+          addSkill(this.value);
+
+          this.value = "";
+        }
+
+        /*
+      Backspace removes
+      last capsule
+    */
+
+        if (
+          event.key === "Backspace" &&
+          this.value === "" &&
+          skills.length > 0
+        ) {
+          const lastSkill = skills[skills.length - 1];
+
+          skills.pop();
+
+          const tags = skillsTagInput.querySelectorAll(".skills-tag");
+
+          if (tags.length > 0) {
+            tags[tags.length - 1].remove();
+          }
+
+          updateSkillsValue();
+        }
+      });
+
+      /*
+  Click anywhere inside
+  skills container to focus input.
+*/
+
+      skillsTagInput.addEventListener("click", () => {
+        skillInput.focus();
+      });
+
+      /* =========================================================
+   PREVIEW
+========================================================= */
+
+      function escapeHtml(value) {
+        return String(value)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#039;");
+      }
+
+      /* =========================================================
+   GET FIELD LABEL
+========================================================= */
+
+      function getFieldLabel(group) {
+        const label = group.querySelector("label");
+
+        if (!label) {
+          return "";
+        }
+
+        return label.innerText.replace(/\*/g, "").replace(/\s+/g, " ").trim();
+      }
+
+      /* =========================================================
+   GET FIELD VALUE
+========================================================= */
+
+      function getFieldValue(group) {
+        const select = group.querySelector("select");
+
+        const textarea = group.querySelector("textarea");
+
+        /*
+    Handle salary,
+    experience and age ranges.
+  */
+
+        const rangeInputs = group.querySelectorAll(".range-inputs input");
+
+        if (rangeInputs.length > 0) {
+          const values = Array.from(rangeInputs).map((input) =>
+            input.value.trim(),
+          );
+
+          const unit = group.querySelector(".range-title");
+
+          const minimum = values[0] || "Not specified";
+
+          const maximum = values[1] || "Not specified";
+
+          return minimum + " - " + maximum + (unit ? " " + unit.innerText : "");
+        }
+
+        if (select) {
+          return select.options[select.selectedIndex]?.text || "";
+        }
+
+        if (textarea) {
+          return textarea.value.trim();
+        }
+
+        const input = group.querySelector("input:not([type='hidden'])");
+
+        if (input) {
+          return input.value.trim();
+        }
+
+        return "";
+      }
+
+      /* =========================================================
+   CREATE PREVIEW ITEM
+========================================================= */
+
+      function createPreviewItem(label, value, fullWidth = false) {
+        if (!value) {
+          value = "Not specified";
+        }
+
+        return `
+    <div
+      class="preview-item ${fullWidth ? "full-width" : ""}"
+    >
+
+      <div class="preview-label">
+        ${escapeHtml(label)}
+      </div>
+
+      <div class="preview-value">
+        ${escapeHtml(value)}
+      </div>
+
+    </div>
+  `;
+      }
+
+      /* =========================================================
+   SKILLS PREVIEW
+========================================================= */
+
+      function renderSkillsPreview() {
+        if (skills.length === 0) {
+          return `
+      <div class="preview-item full-width">
+
+        <div class="preview-label">
+          Required Skills
+        </div>
+
+        <div class="preview-value">
+          Not specified
+        </div>
+
+      </div>
+    `;
+        }
+
+        const capsules = skills
+          .map(
+            (skill) => `
+          <span class="preview-skill">
+            ${escapeHtml(skill)}
+          </span>
+        `,
+          )
+          .join("");
+
+        return `
+    <div class="preview-item full-width">
+
+      <div class="preview-label">
+        Required Skills
+      </div>
+
+      <div class="preview-skills">
+        ${capsules}
+      </div>
+
+    </div>
+  `;
+      }
+
+      /* =========================================================
+   RENDER FORM SECTION
+========================================================= */
+
+      function renderSectionPreview(stepId, containerId) {
+        const section = document.getElementById(stepId);
+
+        const container = document.getElementById(containerId);
+
+        if (!section || !container) {
+          return;
+        }
+
+        let html = "";
+
+        section.querySelectorAll(".form-group").forEach((group) => {
+          /*
+        Required Skills has
+        its own preview.
+      */
+
+          if (group.querySelector("#requiredSkills")) {
+            return;
+          }
+
+          const label = getFieldLabel(group);
+
+          const value = getFieldValue(group);
+
+          if (!label) {
+            return;
+          }
+
+          const fullWidth = group.classList.contains("full-width");
+
+          html += createPreviewItem(label, value, fullWidth);
+        });
+
+        container.innerHTML = html;
+
+        /*
+    Add skills after
+    other eligibility fields.
+  */
+
+        if (stepId === "step3") {
+          container.innerHTML += renderSkillsPreview();
+        }
+      }
+
+      /* =========================================================
+   RENDER COMPLETE PREVIEW
+========================================================= */
+
+      function renderPreview() {
+        renderSectionPreview("step1", "basicInfoPreview");
+
+        renderSectionPreview("step3", "eligibilityPreview");
+
+        renderSectionPreview("step4", "jobDescriptionPreview");
+      }
+
+      /* =========================================================
+   PREVIEW EDIT BUTTONS
+========================================================= */
+
+      document.querySelectorAll(".preview-edit-btn").forEach((button) => {
+        button.addEventListener("click", () => {
+          showStep(button.dataset.edit);
+        });
+      });
+
+      /* =========================================================
+   PREVIEW BACK BUTTON
+========================================================= */
+
+      document
+        .querySelector(".preview-back-btn")
+        .addEventListener("click", function () {
+          showStep(this.dataset.prev);
+        });
+
+      /* =========================================================
+   FINAL SAVE
+========================================================= */
+
+      document
+        .getElementById("finalSaveBtn")
+        .addEventListener("click", function () {
+          alert("Vacancy Published Successfully");
+
+          window.location.href = "../pages/1.1-job-vacancy-list.html";
+        });
+
+      /* =========================================================
+   LEFT MENU
+========================================================= */
+
+      fetch("../inc/leftMenu.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("leftMenuContainer").innerHTML = html;
+        });
+
+      /* =========================================================
+   TOP MENU
+========================================================= */
+
+      fetch("../inc/topMenu.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("topMenuContainer").innerHTML = html;
+
+          setTimeout(() => {
+            const menuToggle = document.getElementById("menuToggle");
+
+            const sidebar = document.getElementById("sidebar");
+
+            const overlay = document.getElementById("sidebarOverlay");
+
+            if (menuToggle && sidebar) {
+              menuToggle.addEventListener("click", (event) => {
+                event.stopPropagation();
+
+                sidebar.classList.toggle("active");
+
+                if (overlay) {
+                  overlay.classList.toggle("active");
+                }
+              });
+            }
+
+            if (overlay) {
+              overlay.addEventListener("click", () => {
+                sidebar.classList.remove("active");
+
+                overlay.classList.remove("active");
+              });
+            }
+
+            const profileToggle = document.getElementById("profileToggle");
+
+            const profileMenu = document.getElementById("profileMenu");
+
+            if (profileToggle && profileMenu) {
+              profileToggle.addEventListener("click", (event) => {
+                event.stopPropagation();
+
+                profileMenu.classList.toggle("show");
+              });
+
+              document.addEventListener("click", (event) => {
+                if (!event.target.closest(".profile-dropdown")) {
+                  profileMenu.classList.remove("show");
+                }
+              });
+            }
+          }, 80);
+        });
+
+      /* =========================================================
+   FOOTER
+========================================================= */
+
+      fetch("../inc/footer.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("footerContainer").innerHTML = html;
+        });
+    </script>
+  </body>
+</html>
